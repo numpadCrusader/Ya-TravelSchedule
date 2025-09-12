@@ -5,6 +5,7 @@
 //  Created by Nikita Khon on 01.09.2025.
 //
 
+import Foundation
 import OpenAPIRuntime
 import OpenAPIURLSession
 
