@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045B21B32E83A64300DF5EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */; };
 		047914642E73D03200FEAC8F /* ScheduleBetweenStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914632E73D03200FEAC8F /* ScheduleBetweenStationsService.swift */; };
 		047914672E73D2A500FEAC8F /* StationScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914662E73D2A500FEAC8F /* StationScheduleService.swift */; };
 		0479146A2E73D66100FEAC8F /* RouteStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914692E73D66100FEAC8F /* RouteStationsService.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047914632E73D03200FEAC8F /* ScheduleBetweenStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBetweenStationsService.swift; sourceTree = "<group>"; };
 		047914662E73D2A500FEAC8F /* StationScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationScheduleService.swift; sourceTree = "<group>"; };
 		047914692E73D66100FEAC8F /* RouteStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStationsService.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				04F5EC1A2E65859D00669B37 /* OpenAPI */,
 				048D02682E36AC4300ECB49C /* TravelScheduleApp.swift */,
 				048D026A2E36AC4300ECB49C /* ContentView.swift */,
+				045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */,
 				048D026C2E36AC4500ECB49C /* Assets.xcassets */,
 				048D026E2E36AC4500ECB49C /* Preview Content */,
 			);
@@ -188,6 +191,7 @@
 				048D02702E36AC4500ECB49C /* Preview Assets.xcassets in Resources */,
 				04F5EC1E2E65862E00669B37 /* openapi-generator-config.yaml in Resources */,
 				048D026D2E36AC4500ECB49C /* Assets.xcassets in Resources */,
+				045B21B32E83A64300DF5EC5 /* LaunchScreen.storyboard in Resources */,
 				04F5EC1C2E6585BB00669B37 /* openapi.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,7 +358,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -388,7 +392,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
