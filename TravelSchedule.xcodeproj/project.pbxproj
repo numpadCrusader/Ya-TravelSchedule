@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		045B21B32E83A64300DF5EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */; };
+		045B21C42E83B33200DF5EC5 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21C32E83B33200DF5EC5 /* ScheduleView.swift */; };
+		045B21C62E83B34300DF5EC5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21C52E83B34300DF5EC5 /* SettingsView.swift */; };
+		045B21C82E83B3E000DF5EC5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21C72E83B3E000DF5EC5 /* MainView.swift */; };
 		047914642E73D03200FEAC8F /* ScheduleBetweenStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914632E73D03200FEAC8F /* ScheduleBetweenStationsService.swift */; };
 		047914672E73D2A500FEAC8F /* StationScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914662E73D2A500FEAC8F /* StationScheduleService.swift */; };
 		0479146A2E73D66100FEAC8F /* RouteStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914692E73D66100FEAC8F /* RouteStationsService.swift */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		045B21C32E83B33200DF5EC5 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		045B21C52E83B34300DF5EC5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		045B21C72E83B3E000DF5EC5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		047914632E73D03200FEAC8F /* ScheduleBetweenStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBetweenStationsService.swift; sourceTree = "<group>"; };
 		047914662E73D2A500FEAC8F /* StationScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationScheduleService.swift; sourceTree = "<group>"; };
 		047914692E73D66100FEAC8F /* RouteStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStationsService.swift; sourceTree = "<group>"; };
@@ -58,6 +64,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045B21C22E83B32100DF5EC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				045B21C32E83B33200DF5EC5 /* ScheduleView.swift */,
+				045B21C52E83B34300DF5EC5 /* SettingsView.swift */,
+				045B21C72E83B3E000DF5EC5 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		048CA2922E65876000C200C2 /* Network Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +108,7 @@
 		048D02672E36AC4300ECB49C /* TravelSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				045B21C22E83B32100DF5EC5 /* Views */,
 				048CA2922E65876000C200C2 /* Network Services */,
 				04F5EC1A2E65859D00669B37 /* OpenAPI */,
 				048D02682E36AC4300ECB49C /* TravelScheduleApp.swift */,
@@ -211,7 +228,10 @@
 				0479146C2E73D79700FEAC8F /* NearestCityService.swift in Sources */,
 				048CA2942E65877600C200C2 /* NearestStationsService.swift in Sources */,
 				047914672E73D2A500FEAC8F /* StationScheduleService.swift in Sources */,
+				045B21C82E83B3E000DF5EC5 /* MainView.swift in Sources */,
 				048D02692E36AC4300ECB49C /* TravelScheduleApp.swift in Sources */,
+				045B21C62E83B34300DF5EC5 /* SettingsView.swift in Sources */,
+				045B21C42E83B33200DF5EC5 /* ScheduleView.swift in Sources */,
 				047914722E73DC0300FEAC8F /* CopyrightService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
