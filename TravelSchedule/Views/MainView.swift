@@ -20,7 +20,7 @@ struct MainView: View {
                     Image(.settings)
                 }
         }
-        .tint(.ypBlack)
+        .tint(.ypTintBlack)
     }
 }
 

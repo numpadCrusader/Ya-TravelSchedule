@@ -11,16 +11,21 @@ struct RoutePicker: View {
     @Binding var fromLocation: String?
     @Binding var toLocation: String?
     
+    var onSelectFrom: () -> Void
+    var onSelectTo: () -> Void
+    
     var body: some View {
         HStack(spacing: 16) {
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(spacing: 0) {
                 RoutePickerButton(
-                    title: "Откуда",
-                    isPlaceholder: fromLocation == nil)
+                    title: fromLocation ?? "Откуда",
+                    isPlaceholder: fromLocation == nil,
+                    action: onSelectFrom)
                 
                 RoutePickerButton(
-                    title: "Куда",
-                    isPlaceholder: toLocation == nil)
+                    title: toLocation ?? "Куда",
+                    isPlaceholder: toLocation == nil,
+                    action: onSelectTo)
             }
             .background(.ypWhite)
             .cornerRadius(20)
@@ -40,12 +45,14 @@ struct RoutePicker: View {
 struct RoutePickerButton: View {
     let title: String
     let isPlaceholder: Bool
+    let action: () -> Void
     
     var body: some View {
-        Button(action: {}) {
+        Button(action: action) {
             HStack {
                 Text(title)
-                    .foregroundColor(isPlaceholder ? .ypGray : .primary)
+                    .font(.system(size: 17, weight: .regular))
+                    .foregroundColor(isPlaceholder ? .ypGray : .ypBlack)
                     .padding(.leading, 16)
                 
                 Spacer()
