@@ -8,43 +8,27 @@
 import SwiftUI
 
 struct RoutePicker: View {
+    @Binding var fromLocation: String?
+    @Binding var toLocation: String?
+    
     var body: some View {
-        ZStack {
-            HStack(spacing: 16) {
-                VStack(alignment: .leading, spacing: 0) {
-                    Button() {
-                        
-                    } label: {
-                        HStack {
-                            Text("Откуда")
-                                .foregroundColor(.ypGray)
-                                .padding(.leading, 16)
-                            Spacer()
-                        }
-                    }
-                    .frame(width: 259, height: 48)
-                    
-                    Button() {
-                        
-                    } label: {
-                        HStack {
-                            Text("Куда")
-                                .foregroundColor(.ypGray)
-                                .padding(.leading, 16)
-                            Spacer()
-                        }
-                    }
-                    .frame(width: 259, height: 48)
-                }
-                .background(.ypWhite)
-                .cornerRadius(20)
+        HStack(spacing: 16) {
+            VStack(alignment: .leading, spacing: 0) {
+                RoutePickerButton(
+                    title: "Откуда",
+                    isPlaceholder: fromLocation == nil)
                 
-                Button {
-                    
-                } label: {
-                    Image(.сhange)
-                    
-                }
+                RoutePickerButton(
+                    title: "Куда",
+                    isPlaceholder: toLocation == nil)
+            }
+            .background(.ypWhite)
+            .cornerRadius(20)
+            
+            Button {
+                swap(&fromLocation, &toLocation)
+            } label: {
+                Image(.сhange)
             }
         }
         .frame(width: 343, height: 128)
@@ -53,6 +37,20 @@ struct RoutePicker: View {
     }
 }
 
-#Preview {
-    RoutePicker()
+struct RoutePickerButton: View {
+    let title: String
+    let isPlaceholder: Bool
+    
+    var body: some View {
+        Button(action: {}) {
+            HStack {
+                Text(title)
+                    .foregroundColor(isPlaceholder ? .ypGray : .primary)
+                    .padding(.leading, 16)
+                
+                Spacer()
+            }
+            .frame(width: 259, height: 48)
+        }
+    }
 }

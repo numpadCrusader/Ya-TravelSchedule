@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct ScheduleView: View {
+    @State private var fromLocation: String?
+    @State private var toLocation: String?
+    
     var body: some View {
-        RoutePicker()
+        VStack(spacing: 16) {
+            RoutePicker(
+                fromLocation: $fromLocation,
+                toLocation: $toLocation)
+        }
     }
 }
 
