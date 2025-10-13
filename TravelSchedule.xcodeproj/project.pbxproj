@@ -71,10 +71,10 @@
 		045B21C22E83B32100DF5EC5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				045B221C2E83F34400DF5EC5 /* CitySelectionView */,
-				045B21E02E83C48A00DF5EC5 /* ScheduleView */,
-				045B21C52E83B34300DF5EC5 /* SettingsView.swift */,
 				045B21C72E83B3E000DF5EC5 /* MainView.swift */,
+				045B21E02E83C48A00DF5EC5 /* ScheduleView */,
+				04B5FC492E9D60700014CD18 /* SettingsView */,
+				045B221C2E83F34400DF5EC5 /* CitySelectionView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +156,14 @@
 				048D026F2E36AC4500ECB49C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04B5FC492E9D60700014CD18 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				045B21C52E83B34300DF5EC5 /* SettingsView.swift */,
+			);
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 		04F5EC1A2E65859D00669B37 /* OpenAPI */ = {
