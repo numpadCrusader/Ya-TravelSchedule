@@ -10,15 +10,19 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            ScheduleView()
-                .tabItem {
-                    Image(.schedule)
-                }
+            NavigationStack {
+                ScheduleView()
+            }
+            .tabItem {
+                Image(.schedule)
+            }
             
-            SettingsView()
-                .tabItem {
-                    Image(.settings)
-                }
+            NavigationStack {
+                SettingsView()
+            }
+            .tabItem {
+                Image(.settings)
+            }
         }
         .tint(.ypTintBlack)
     }
