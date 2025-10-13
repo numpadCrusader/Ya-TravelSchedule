@@ -10,7 +10,7 @@ import SwiftUI
 struct ScheduleView: View {
     @State private var fromLocation: String?
     @State private var toLocation: String?
-    @State private var isPresentingModal = false
+    @State private var selectedPickerType: PickerType?
     
     var body: some View {
         VStack(spacing: 16) {
@@ -18,12 +18,13 @@ struct ScheduleView: View {
                 fromLocation: $fromLocation,
                 toLocation: $toLocation,
                 onSelectFrom: {
-                    isPresentingModal = true
+                    selectedPickerType = .from
                 },
                 onSelectTo: {
-                    isPresentingModal = true
+                    selectedPickerType = .to
                 }
             )
+            .padding(.top, 208)
             
             if let _ = fromLocation, let _ = toLocation {
                 Button() {
@@ -40,10 +41,14 @@ struct ScheduleView: View {
             
             Spacer()
         }
-        .sheet(isPresented: $isPresentingModal) {
-            
+        .navigationDestination(item: $selectedPickerType) { _ in
+            CitySelectionView()
         }
     }
+}
+
+enum PickerType: Hashable {
+    case from, to
 }
 
 #Preview {
