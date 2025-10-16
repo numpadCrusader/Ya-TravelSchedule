@@ -9,10 +9,14 @@ import SwiftUI
 
 struct CitySelectionView: View {
     @Environment(\.dismiss) private var dismiss
+    @State private var searchQuery = ""
     
     var body: some View {
         VStack {
-            Text("City Selection")
+            SearchBar(text: $searchQuery, prompt: "Введите запрос")
+            Spacer()
+            Text(searchQuery)
+            Spacer()
         }
         .navigationTitle("Выбор города")
         .navigationBarTitleDisplayMode(.inline)
