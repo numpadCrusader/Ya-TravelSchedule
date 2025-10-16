@@ -11,6 +11,7 @@ struct ScheduleView: View {
     @State private var fromLocation: String?
     @State private var toLocation: String?
     @State private var selectedPickerType: PickerType?
+    @State private var showCitySelection = false
     
     var body: some View {
         VStack(spacing: 16) {
@@ -19,9 +20,11 @@ struct ScheduleView: View {
                 toLocation: $toLocation,
                 onSelectFrom: {
                     selectedPickerType = .from
+                    showCitySelection = true
                 },
                 onSelectTo: {
                     selectedPickerType = .to
+                    showCitySelection = true
                 }
             )
             .padding(.top, 208)
@@ -41,8 +44,10 @@ struct ScheduleView: View {
             
             Spacer()
         }
-        .navigationDestination(item: $selectedPickerType) { _ in
-            CitySelectionView()
+        .fullScreenCover(isPresented: $showCitySelection) {
+            NavigationStack {
+                CitySelectionView()
+            }
         }
     }
 }
