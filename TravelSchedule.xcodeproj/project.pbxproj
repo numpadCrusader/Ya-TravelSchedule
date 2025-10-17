@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */; };
 		045B21B32E83A64300DF5EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */; };
 		045B21C42E83B33200DF5EC5 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21C32E83B33200DF5EC5 /* ScheduleView.swift */; };
 		045B21C62E83B34300DF5EC5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21C52E83B34300DF5EC5 /* SettingsView.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChevronRow.swift; sourceTree = "<group>"; };
 		045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045B21C32E83B33200DF5EC5 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		045B21C52E83B34300DF5EC5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		04B2B3002EA15781000A53B3 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */,
 				04B2B2F92EA1569B000A53B3 /* SearchBar.swift */,
 			);
 			path = Subviews;
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0479146E2E73D87D00FEAC8F /* CarrierInfoService.swift in Sources */,
+				0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */,
 				047914642E73D03200FEAC8F /* ScheduleBetweenStationsService.swift in Sources */,
 				047914702E73DB6700FEAC8F /* AllStationsService.swift in Sources */,
 				048D026B2E36AC4300ECB49C /* ContentView.swift in Sources */,
