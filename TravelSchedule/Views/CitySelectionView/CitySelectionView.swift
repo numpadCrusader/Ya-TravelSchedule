@@ -25,7 +25,7 @@ struct CitySelectionView: View {
                 Button() {
                     dismiss()
                 } label: {
-                    Image(.chevronBack)
+                    Image(.icChevronLeft22Px)
                 }
             }
         }
