@@ -36,7 +36,7 @@ struct ScheduleView: View {
                     showCarriers = true
                 } label: {
                     Text("Найти")
-                        .foregroundColor(.ypWhite)
+                        .foregroundColor(.ypWhiteUniversal)
                         .font(.system(size: 17, weight: .bold))
                         .frame(width: 150, height: 60)
                         .background(.ypBlue)

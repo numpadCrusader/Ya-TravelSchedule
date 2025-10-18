@@ -18,24 +18,61 @@ struct CarriersView: View {
             date: "14 января",
             fromTime: "22:30",
             toTime: "8:30",
+            hasTransfer: false
+        ),
+        Carrier(
+            title: "РЖД",
+            date: "14 января",
+            fromTime: "22:30",
+            toTime: "8:30",
             hasTransfer: true
+        ),
+        Carrier(
+            title: "РЖД",
+            date: "14 января",
+            fromTime: "22:30",
+            toTime: "8:30",
+            hasTransfer: false
+        ),
+        Carrier(
+            title: "РЖД",
+            date: "14 января",
+            fromTime: "22:30",
+            toTime: "8:30",
+            hasTransfer: true
+        ),
+        Carrier(
+            title: "РЖД",
+            date: "14 января",
+            fromTime: "22:30",
+            toTime: "8:30",
+            hasTransfer: true
+        ),
+        Carrier(
+            title: "РЖД",
+            date: "14 января",
+            fromTime: "22:30",
+            toTime: "8:30",
+            hasTransfer: false
         )
     ]
     
     var body: some View {
-        Text("\(fromLocation) → \(toLocation)")
-            .font(.system(size: 24, weight: .bold))
-            .foregroundStyle(.ypBlack)
-            .padding(.top, 16)
-            .padding(.horizontal, 16)
-        
-        ScrollView {
-            LazyVStack {
-                ForEach(carriers) { carrier in
-                    CarrierCardView(carrier: carrier)
+        VStack(spacing: 16) {
+            Text("\(fromLocation) → \(toLocation)")
+                .font(.system(size: 24, weight: .bold))
+                .foregroundStyle(.ypBlack)
+                .padding(.horizontal, 16)
+            
+            ScrollView {
+                LazyVStack(spacing: 8) {
+                    ForEach(carriers) { carrier in
+                        CarrierCardView(carrier: carrier)
+                    }
                 }
             }
         }
+        .padding(.top, 16)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button() {
@@ -43,6 +80,21 @@ struct CarriersView: View {
                 } label: {
                     Image(.icChevronLeft22Px)
                 }
+            }
+        }
+        .overlay(alignment: .bottom) {
+            Button() {
+                
+            } label: {
+                Text("Уточнить время")
+                    .foregroundColor(.ypWhiteUniversal)
+                    .font(.system(size: 17, weight: .bold))
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 60)
+                    .background(.ypBlue)
+                    .cornerRadius(16)
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 24)
             }
         }
     }

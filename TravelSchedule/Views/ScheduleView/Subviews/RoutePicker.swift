@@ -27,7 +27,7 @@ struct RoutePicker: View {
                     isPlaceholder: toLocation == nil,
                     action: onSelectTo)
             }
-            .background(.ypWhite)
+            .background(.ypWhiteUniversal)
             .cornerRadius(20)
             
             Button {
