@@ -32,9 +32,17 @@ struct CitySelectionView: View {
             } else {
                 List {
                     ForEach(searchResults, id: \.self) { city in
-                        TextChevronRow(text: city)
-                            .listRowSeparator(.hidden)
-                            .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
+                        ZStack(alignment: .leading) {
+                            NavigationLink(value: city) {
+                                EmptyView()
+                            }
+                            .opacity(0)
+                            
+                            TextChevronRow(text: city)
+                        }
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
+                        .contentShape(Rectangle())
                     }
                 }
                 .listStyle(.plain)
@@ -51,6 +59,9 @@ struct CitySelectionView: View {
                     Image(.icChevronLeft22Px)
                 }
             }
+        }
+        .navigationDestination(for: String.self) { _ in
+            StationSelectionView()
         }
     }
     

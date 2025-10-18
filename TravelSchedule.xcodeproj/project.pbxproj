@@ -26,6 +26,7 @@
 		048D026B2E36AC4300ECB49C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D026A2E36AC4300ECB49C /* ContentView.swift */; };
 		048D026D2E36AC4500ECB49C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D026C2E36AC4500ECB49C /* Assets.xcassets */; };
 		048D02702E36AC4500ECB49C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D026F2E36AC4500ECB49C /* Preview Assets.xcassets */; };
+		04A5A5DC2EA39A6000DFE7A1 /* StationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A5DB2EA39A6000DFE7A1 /* StationSelectionView.swift */; };
 		04B2B2FA2EA1569B000A53B3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2B2F92EA1569B000A53B3 /* SearchBar.swift */; };
 		04F5EC142E65848C00669B37 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 04F5EC132E65848C00669B37 /* OpenAPIRuntime */; };
 		04F5EC172E6584A200669B37 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 04F5EC162E6584A200669B37 /* OpenAPIURLSession */; };
@@ -54,6 +55,7 @@
 		048D026A2E36AC4300ECB49C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		048D026C2E36AC4500ECB49C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D026F2E36AC4500ECB49C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04A5A5DB2EA39A6000DFE7A1 /* StationSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionView.swift; sourceTree = "<group>"; };
 		04B2B2F92EA1569B000A53B3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		04F5EC1B2E6585BB00669B37 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		04F5EC1D2E65862E00669B37 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				045B21E02E83C48A00DF5EC5 /* ScheduleView */,
 				04B5FC492E9D60700014CD18 /* SettingsView */,
 				045B221C2E83F34400DF5EC5 /* CitySelectionView */,
+				04A5A5DA2EA39A2E00DFE7A1 /* StationSelectionView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +164,14 @@
 				048D026F2E36AC4500ECB49C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04A5A5DA2EA39A2E00DFE7A1 /* StationSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				04A5A5DB2EA39A6000DFE7A1 /* StationSelectionView.swift */,
+			);
+			path = StationSelectionView;
 			sourceTree = "<group>";
 		};
 		04B2B3002EA15781000A53B3 /* Subviews */ = {
@@ -276,6 +287,7 @@
 				0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */,
 				047914642E73D03200FEAC8F /* ScheduleBetweenStationsService.swift in Sources */,
 				047914702E73DB6700FEAC8F /* AllStationsService.swift in Sources */,
+				04A5A5DC2EA39A6000DFE7A1 /* StationSelectionView.swift in Sources */,
 				048D026B2E36AC4300ECB49C /* ContentView.swift in Sources */,
 				0479146A2E73D66100FEAC8F /* RouteStationsService.swift in Sources */,
 				04B2B2FA2EA1569B000A53B3 /* SearchBar.swift in Sources */,
