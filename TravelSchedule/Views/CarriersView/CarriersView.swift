@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CarriersView: View {
     @Environment(\.dismiss) private var dismiss
+    @State private var showCarrierFilters = false
     
     let fromLocation: String
     let toLocation: String
@@ -58,7 +59,7 @@ struct CarriersView: View {
     ]
     
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(alignment: .leading, spacing: 16) {
             Text("\(fromLocation) → \(toLocation)")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.ypBlack)
@@ -82,9 +83,12 @@ struct CarriersView: View {
                 }
             }
         }
+        .navigationDestination(isPresented: $showCarrierFilters) {
+            CarrierFiltersView()
+        }
         .overlay(alignment: .bottom) {
             Button() {
-                
+                showCarrierFilters = true
             } label: {
                 Text("Уточнить время")
                     .foregroundColor(.ypWhiteUniversal)
