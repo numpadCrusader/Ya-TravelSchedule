@@ -9,7 +9,15 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
+        Spacer()
+        
         Text("Settings")
+        
+        Spacer()
+        
+        Divider()
+            .background(.black.opacity(0.3))
+            .padding(.bottom, 0.5)
     }
 }
 

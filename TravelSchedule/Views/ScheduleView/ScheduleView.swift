@@ -43,6 +43,10 @@ struct ScheduleView: View {
             }
             
             Spacer()
+            
+            Divider()
+                .background(.black.opacity(0.3))
+                .padding(.bottom, 0.5)
         }
         .fullScreenCover(isPresented: $showCitySelection) {
             NavigationStack {
