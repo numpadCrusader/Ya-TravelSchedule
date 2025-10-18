@@ -11,7 +11,9 @@ struct ScheduleView: View {
     @State private var fromLocation: String?
     @State private var toLocation: String?
     @State private var selectedPickerType: PickerType?
+    
     @State private var showCitySelection = false
+    @State private var showCarriers = false
     
     var body: some View {
         VStack(spacing: 16) {
@@ -29,9 +31,9 @@ struct ScheduleView: View {
             )
             .padding(.top, 208)
             
-            if let _ = fromLocation, let _ = toLocation {
+            if fromLocation != nil, toLocation != nil {
                 Button() {
-                    print("Finding route")
+                    showCarriers = true
                 } label: {
                     Text("Найти")
                         .foregroundColor(.ypWhite)
@@ -57,6 +59,13 @@ struct ScheduleView: View {
                         toLocation = "\(city) (\(station))"
                     }
                     showCitySelection = false
+                }
+            }
+        }
+        .fullScreenCover(isPresented: $showCarriers) {
+            if let from = fromLocation, let to = toLocation {
+                NavigationStack {
+                    CarriersView(fromLocation: from, toLocation: to)
                 }
             }
         }
