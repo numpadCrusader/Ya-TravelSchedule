@@ -54,6 +54,8 @@ struct RoutePickerButton: View {
                     .font(.system(size: 17, weight: .regular))
                     .foregroundColor(isPlaceholder ? .ypGray : .ypBlack)
                     .padding(.leading, 16)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
                 
                 Spacer()
             }

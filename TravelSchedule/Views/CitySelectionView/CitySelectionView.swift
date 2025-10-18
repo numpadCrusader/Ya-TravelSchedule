@@ -10,6 +10,9 @@ import SwiftUI
 struct CitySelectionView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var searchQuery = ""
+    @State private var selectedCity: String?
+    
+    let onComplete: (String, String) -> Void
     
     let cities = [
         "Москва", "Санкт Петербург", "Сочи", "Горный воздух",
@@ -32,17 +35,13 @@ struct CitySelectionView: View {
             } else {
                 List {
                     ForEach(searchResults, id: \.self) { city in
-                        ZStack(alignment: .leading) {
-                            NavigationLink(value: city) {
-                                EmptyView()
-                            }
-                            .opacity(0)
-                            
+                        Button {
+                            selectedCity = city
+                        } label: {
                             TextChevronRow(text: city)
                         }
                         .listRowSeparator(.hidden)
                         .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
-                        .contentShape(Rectangle())
                     }
                 }
                 .listStyle(.plain)
@@ -60,8 +59,10 @@ struct CitySelectionView: View {
                 }
             }
         }
-        .navigationDestination(for: String.self) { _ in
-            StationSelectionView()
+        .navigationDestination(item: $selectedCity) { _ in
+            StationSelectionView { station in
+                onComplete(selectedCity ?? "", station)
+            }
         }
     }
     
@@ -75,5 +76,5 @@ struct CitySelectionView: View {
 }
 
 #Preview {
-    CitySelectionView()
+    CitySelectionView { _, _ in }
 }

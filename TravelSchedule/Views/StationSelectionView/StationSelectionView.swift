@@ -11,6 +11,8 @@ struct StationSelectionView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var searchQuery = ""
     
+    let onSelect: (String) -> Void
+    
     let stations = [
         "Киевский вокзал", "Курский вокзал", "Ярославский вокзал",
         "Белорусский вокзал", "Савеловский вокзал", "Ленинградский вокзал"
@@ -32,9 +34,13 @@ struct StationSelectionView: View {
             } else {
                 List {
                     ForEach(searchResults, id: \.self) { station in
-                        TextChevronRow(text: station)
-                            .listRowSeparator(.hidden)
-                            .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
+                        Button {
+                            onSelect(station)
+                        } label: {
+                            TextChevronRow(text: station)
+                        }
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
                     }
                 }
                 .listStyle(.plain)
@@ -65,5 +71,5 @@ struct StationSelectionView: View {
 }
 
 #Preview {
-    StationSelectionView()
+    StationSelectionView { _ in }
 }

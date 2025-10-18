@@ -46,7 +46,14 @@ struct ScheduleView: View {
         }
         .fullScreenCover(isPresented: $showCitySelection) {
             NavigationStack {
-                CitySelectionView()
+                CitySelectionView { city, station in
+                    if selectedPickerType == .from {
+                        fromLocation = "\(city) (\(station))"
+                    } else {
+                        toLocation = "\(city) (\(station))"
+                    }
+                    showCitySelection = false
+                }
             }
         }
     }
