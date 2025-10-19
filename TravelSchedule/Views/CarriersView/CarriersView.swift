@@ -74,6 +74,7 @@ struct CarriersView: View {
             }
         }
         .padding(.top, 16)
+        .padding(.bottom, 84)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button() {
@@ -84,7 +85,9 @@ struct CarriersView: View {
             }
         }
         .navigationDestination(isPresented: $showCarrierFilters) {
-            CarrierFiltersView()
+            CarrierFiltersView { timeRangeList, showTransfers in
+                
+            }
         }
         .overlay(alignment: .bottom) {
             Button() {

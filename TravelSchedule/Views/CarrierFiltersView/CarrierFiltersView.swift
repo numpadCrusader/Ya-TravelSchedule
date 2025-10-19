@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct CarrierFiltersView: View {
+    @Environment(\.dismiss) private var dismiss
+    
     @State private var selectedTimes: Set<TimeRange> = []
     @State private var showTransfers: Bool? = nil
+    
+    let onFinish: (Set<TimeRange>, Bool) -> Void
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -62,9 +66,36 @@ struct CarrierFiltersView: View {
         }
         .padding(.top, 16)
         .padding(.horizontal, 16)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(.icChevronLeft22Px)
+                }
+            }
+        }
+        .overlay(alignment: .bottom) {
+            if !selectedTimes.isEmpty, let showTransfers {
+                Button() {
+                    onFinish(selectedTimes, showTransfers)
+                } label: {
+                    Text("Применить")
+                        .foregroundColor(.ypWhiteUniversal)
+                        .font(.system(size: 17, weight: .bold))
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 60)
+                        .background(.ypBlueUniversal)
+                        .cornerRadius(16)
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 24)
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    CarrierFiltersView()
+    CarrierFiltersView { _, _ in }
 }
