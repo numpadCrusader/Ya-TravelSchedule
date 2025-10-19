@@ -95,8 +95,8 @@
 		045B21C22E83B32100DF5EC5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04A5A71C2EA4F95100DFE7A1 /* ErrorView */,
 				045B21C72E83B3E000DF5EC5 /* MainView.swift */,
+				04A5A71C2EA4F95100DFE7A1 /* ErrorView */,
 				045B21E02E83C48A00DF5EC5 /* ScheduleView */,
 				04B5FC492E9D60700014CD18 /* SettingsView */,
 				045B221C2E83F34400DF5EC5 /* CitySelectionView */,

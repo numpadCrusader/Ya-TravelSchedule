@@ -9,16 +9,19 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Spacer()
-        
-        ErrorView(errorType: .noInternet)
-//        ErrorView(errorType: .serverError)
-        
-        Spacer()
-        
-        Divider()
-            .background(.black.opacity(0.3))
-            .padding(.bottom, 0.5)
+        VStack {
+            Spacer()
+            
+            ErrorView(errorType: .noInternet)
+//            ErrorView(errorType: .serverError)
+            
+            Spacer()
+            
+            Divider()
+                .background(.black.opacity(0.3))
+                .padding(.bottom, 0.5)
+        }
+        .background(.ypWhiteDynamic)
     }
 }
 

@@ -50,6 +50,7 @@ struct ScheduleView: View {
                 .background(.black.opacity(0.3))
                 .padding(.bottom, 0.5)
         }
+        .background(.ypWhiteDynamic)
         .fullScreenCover(isPresented: $showCitySelection) {
             NavigationStack {
                 CitySelectionView { city, station in

@@ -74,13 +74,13 @@ struct CarriersView: View {
             }
         }
         .padding(.top, 16)
-        .padding(.bottom, 84)
+        .background(.ypWhiteDynamic)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button() {
                     dismiss()
                 } label: {
-                    Image(.icChevronLeft22Px)
+                    Image(.icChevronLeft)
                 }
             }
         }

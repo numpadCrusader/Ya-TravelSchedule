@@ -41,12 +41,14 @@ struct StationSelectionView: View {
                         }
                         .listRowSeparator(.hidden)
                         .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
+                        .listRowBackground(Color.ypWhiteDynamic)
                     }
                 }
                 .listStyle(.plain)
                 .padding(.top, 16)
             }
         }
+        .background(.ypWhiteDynamic)
         .navigationTitle("Выбор станции")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
@@ -55,7 +57,7 @@ struct StationSelectionView: View {
                 Button {
                     dismiss()
                 } label: {
-                    Image(.icChevronLeft22Px)
+                    Image(.icChevronLeft)
                 }
             }
         }

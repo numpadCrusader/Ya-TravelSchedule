@@ -20,7 +20,7 @@ struct CarrierFiltersView: View {
             VStack(alignment: .leading, spacing: 16) {
                 Text("Время отправления")
                     .font(.system(size: 24, weight: .bold))
-                    .foregroundStyle(.ypBlackUniversal)
+                    .foregroundStyle(.ypBlackDynamic)
                 
                 VStack {
                     ForEach(TimeRange.allCases, id: \.self) { range in
@@ -43,7 +43,7 @@ struct CarrierFiltersView: View {
             VStack(alignment: .leading, spacing: 16) {
                 Text("Показывать варианты с пересадками")
                     .font(.system(size: 24, weight: .bold))
-                    .foregroundStyle(.ypBlackUniversal)
+                    .foregroundStyle(.ypBlackDynamic)
                 
                 VStack {
                     TextRadioButtonRow(
@@ -66,13 +66,14 @@ struct CarrierFiltersView: View {
         }
         .padding(.top, 16)
         .padding(.horizontal, 16)
+        .background(.ypWhiteDynamic)
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {
                     dismiss()
                 } label: {
-                    Image(.icChevronLeft22Px)
+                    Image(.icChevronLeft)
                 }
             }
         }

@@ -18,7 +18,7 @@ struct TextChevronRow: View {
             
             Spacer()
             
-            Image(.icChevronRight24Px)
+            Image(.icChevronRight)
         }
         .frame(height: 60)
     }

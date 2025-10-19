@@ -42,12 +42,14 @@ struct CitySelectionView: View {
                         }
                         .listRowSeparator(.hidden)
                         .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
+                        .listRowBackground(Color.ypWhiteDynamic)
                     }
                 }
                 .listStyle(.plain)
                 .padding(.top, 16)
             }
         }
+        .background(.ypWhiteDynamic)
         .navigationTitle("Выбор города")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -55,7 +57,7 @@ struct CitySelectionView: View {
                 Button() {
                     dismiss()
                 } label: {
-                    Image(.icChevronLeft22Px)
+                    Image(.icChevronLeft)
                 }
             }
         }

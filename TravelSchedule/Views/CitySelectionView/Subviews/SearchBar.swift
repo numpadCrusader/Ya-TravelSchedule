@@ -15,30 +15,35 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "magnifyingglass")
-                .foregroundColor(.gray)
+            Image(.icSearch)
+                .foregroundColor(text.isEmpty ? .ypGrayUniversal : .ypBlackDynamic)
             
-            TextField(prompt, text: $text)
-                .tint(.ypBlueUniversal)
-                .focused($isFocused)
-                .textFieldStyle(.plain)
-                .autocorrectionDisabled()
-                .textInputAutocapitalization(.never)
-                .padding(.vertical, 8)
+            TextField(
+                "",
+                text: $text,
+                prompt: Text(prompt).foregroundStyle(.ypGrayUniversal)
+            )
+            .foregroundColor(.ypBlackDynamic)
+            .tint(.ypBlueUniversal)
+            .focused($isFocused)
+            .textFieldStyle(.plain)
+            .autocorrectionDisabled()
+            .textInputAutocapitalization(.never)
+            .padding(.vertical, 8)
             
             if !text.isEmpty {
                 Button {
                     text = ""
                     isFocused = true
                 } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(.gray)
+                    Image(.icClear)
+                        .foregroundColor(.ypGrayUniversal)
                 }
                 .buttonStyle(.plain)
             }
         }
         .padding(.horizontal, 10)
-        .background(Color(.systemGray6))
+        .background(.searchBarGray)
         .cornerRadius(10)
         .padding(.horizontal)
         .animation(.default, value: text)
