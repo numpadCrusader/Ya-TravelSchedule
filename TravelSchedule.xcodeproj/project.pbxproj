@@ -34,6 +34,8 @@
 		04A5A6D02EA4DA0400DFE7A1 /* TimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A6CF2EA4DA0400DFE7A1 /* TimeRange.swift */; };
 		04A5A6E32EA4DE3900DFE7A1 /* TextCheckboxRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A6E22EA4DE3900DFE7A1 /* TextCheckboxRow.swift */; };
 		04A5A6EC2EA4E03B00DFE7A1 /* TextRadioButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A6EB2EA4E03B00DFE7A1 /* TextRadioButtonRow.swift */; };
+		04A5A7192EA4F92700DFE7A1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A7182EA4F92700DFE7A1 /* ErrorView.swift */; };
+		04A5A7252EA4F96700DFE7A1 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A7242EA4F96700DFE7A1 /* ErrorType.swift */; };
 		04B2B2FA2EA1569B000A53B3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2B2F92EA1569B000A53B3 /* SearchBar.swift */; };
 		04F5EC142E65848C00669B37 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 04F5EC132E65848C00669B37 /* OpenAPIRuntime */; };
 		04F5EC172E6584A200669B37 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 04F5EC162E6584A200669B37 /* OpenAPIURLSession */; };
@@ -70,6 +72,8 @@
 		04A5A6CF2EA4DA0400DFE7A1 /* TimeRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRange.swift; sourceTree = "<group>"; };
 		04A5A6E22EA4DE3900DFE7A1 /* TextCheckboxRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCheckboxRow.swift; sourceTree = "<group>"; };
 		04A5A6EB2EA4E03B00DFE7A1 /* TextRadioButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRadioButtonRow.swift; sourceTree = "<group>"; };
+		04A5A7182EA4F92700DFE7A1 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		04A5A7242EA4F96700DFE7A1 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		04B2B2F92EA1569B000A53B3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		04F5EC1B2E6585BB00669B37 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		04F5EC1D2E65862E00669B37 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		045B21C22E83B32100DF5EC5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04A5A71C2EA4F95100DFE7A1 /* ErrorView */,
 				045B21C72E83B3E000DF5EC5 /* MainView.swift */,
 				045B21E02E83C48A00DF5EC5 /* ScheduleView */,
 				04B5FC492E9D60700014CD18 /* SettingsView */,
@@ -243,6 +248,23 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		04A5A71C2EA4F95100DFE7A1 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				04A5A71F2EA4F95A00DFE7A1 /* Models */,
+				04A5A7182EA4F92700DFE7A1 /* ErrorView.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		04A5A71F2EA4F95A00DFE7A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04A5A7242EA4F96700DFE7A1 /* ErrorType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		04B2B3002EA15781000A53B3 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0479146E2E73D87D00FEAC8F /* CarrierInfoService.swift in Sources */,
+				04A5A7252EA4F96700DFE7A1 /* ErrorType.swift in Sources */,
 				04A5A69D2EA4102A00DFE7A1 /* CarrierFiltersView.swift in Sources */,
 				0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */,
 				047914642E73D03200FEAC8F /* ScheduleBetweenStationsService.swift in Sources */,
@@ -363,6 +386,7 @@
 				04B2B2FA2EA1569B000A53B3 /* SearchBar.swift in Sources */,
 				045B21E72E83C55300DF5EC5 /* RoutePicker.swift in Sources */,
 				0479146C2E73D79700FEAC8F /* NearestCityService.swift in Sources */,
+				04A5A7192EA4F92700DFE7A1 /* ErrorView.swift in Sources */,
 				048CA2942E65877600C200C2 /* NearestStationsService.swift in Sources */,
 				04A5A6E32EA4DE3900DFE7A1 /* TextCheckboxRow.swift in Sources */,
 				04A5A6202EA3E14400DFE7A1 /* CarriersView.swift in Sources */,

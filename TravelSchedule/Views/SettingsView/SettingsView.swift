@@ -11,7 +11,8 @@ struct SettingsView: View {
     var body: some View {
         Spacer()
         
-        Text("Settings")
+        ErrorView(errorType: .noInternet)
+//        ErrorView(errorType: .serverError)
         
         Spacer()
         
