@@ -9,7 +9,9 @@ import SwiftUI
 
 struct CarriersView: View {
     @Environment(\.dismiss) private var dismiss
+    
     @State private var showCarrierFilters = false
+    @State private var selectedCarrier: Carrier?
     
     let fromLocation: String
     let toLocation: String
@@ -59,18 +61,35 @@ struct CarriersView: View {
     ]
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack {
             Text("\(fromLocation) → \(toLocation)")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.ypBlackDynamic)
                 .padding(.horizontal, 16)
+                .multilineTextAlignment(.leading)
             
-            ScrollView {
-                LazyVStack(spacing: 8) {
-                    ForEach(carriers) { carrier in
-                        CarrierCardView(carrier: carrier)
+            if carriers.isEmpty {
+                VStack {
+                    Spacer()
+                    Text("Вариантов нет")
+                        .font(.system(size: 24, weight: .bold))
+                        .foregroundStyle(.ypBlackDynamic)
+                        .multilineTextAlignment(.center)
+                    Spacer()
+                }
+            } else {
+                ScrollView {
+                    LazyVStack(spacing: 8) {
+                        ForEach(carriers) { carrier in
+                            Button {
+                                selectedCarrier = carrier
+                            } label: {
+                                CarrierCardView(carrier: carrier)
+                            }
+                        }
                     }
                 }
+                .padding(.top, 16)
             }
         }
         .padding(.top, 16)
@@ -88,6 +107,9 @@ struct CarriersView: View {
             CarrierFiltersView { timeRangeList, showTransfers in
                 
             }
+        }
+        .navigationDestination(item: $selectedCarrier) { _ in
+            CarrierInfoView()
         }
         .overlay(alignment: .bottom) {
             Button() {
