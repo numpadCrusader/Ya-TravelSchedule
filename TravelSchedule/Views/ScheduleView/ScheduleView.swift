@@ -39,7 +39,7 @@ struct ScheduleView: View {
                         .foregroundColor(.ypWhiteUniversal)
                         .font(.system(size: 17, weight: .bold))
                         .frame(width: 150, height: 60)
-                        .background(.ypBlue)
+                        .background(.ypBlueUniversal)
                         .cornerRadius(16)
                 }
             }

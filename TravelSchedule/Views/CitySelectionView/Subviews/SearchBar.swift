@@ -19,7 +19,7 @@ struct SearchBar: View {
                 .foregroundColor(.gray)
             
             TextField(prompt, text: $text)
-                .tint(.ypBlue)
+                .tint(.ypBlueUniversal)
                 .focused($isFocused)
                 .textFieldStyle(.plain)
                 .autocorrectionDisabled()

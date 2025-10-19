@@ -43,7 +43,7 @@ struct CarrierCardView: View {
                     Text("20 часов")
                         .font(.system(size: 12, weight: .regular))
                         .padding(.horizontal, 5)
-                        .background(.ypLightGray)
+                        .background(.ypLightGrayUniversal)
                 }
                 
                 Text(carrier.toTime)
@@ -52,7 +52,7 @@ struct CarrierCardView: View {
             .foregroundStyle(.ypBlackUniversal)
         }
         .padding(14)
-        .background(.ypLightGray)
+        .background(.ypLightGrayUniversal)
         .clipShape(RoundedRectangle(cornerRadius: 24))
         .padding(.horizontal, 16)
         .overlay(alignment: .topTrailing) {

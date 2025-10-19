@@ -27,7 +27,7 @@ struct StationSelectionView: View {
                     Spacer()
                     Text("Станция не найдена")
                         .font(.system(size: 24, weight: .bold))
-                        .foregroundStyle(.ypBlack)
+                        .foregroundStyle(.ypBlackDynamic)
                         .multilineTextAlignment(.center)
                     Spacer()
                 }

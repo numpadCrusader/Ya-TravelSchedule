@@ -28,7 +28,7 @@ struct CitySelectionView: View {
                     Spacer()
                     Text("Город не найден")
                         .font(.system(size: 24, weight: .bold))
-                        .foregroundStyle(.ypBlack)
+                        .foregroundStyle(.ypBlackDynamic)
                         .multilineTextAlignment(.center)
                     Spacer()
                 }

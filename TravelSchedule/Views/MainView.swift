@@ -24,7 +24,7 @@ struct MainView: View {
                 Image(.settings)
             }
         }
-        .tint(.ypTintBlack)
+        .tint(.ypBlackDynamic)
     }
 }
 

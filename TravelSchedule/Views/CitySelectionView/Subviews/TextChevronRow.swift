@@ -14,7 +14,7 @@ struct TextChevronRow: View {
         HStack {
             Text(text)
                 .font(.system(size: 17, weight: .regular))
-                .foregroundStyle(.ypBlack)
+                .foregroundStyle(.ypBlackDynamic)
             
             Spacer()
             

@@ -37,7 +37,7 @@ struct RoutePicker: View {
             }
         }
         .frame(width: 343, height: 128)
-        .background(.ypBlue)
+        .background(.ypBlueUniversal)
         .cornerRadius(20)
     }
 }
@@ -52,7 +52,7 @@ struct RoutePickerButton: View {
             HStack {
                 Text(title)
                     .font(.system(size: 17, weight: .regular))
-                    .foregroundColor(isPlaceholder ? .ypGray : .ypBlack)
+                    .foregroundColor(isPlaceholder ? .ypGrayUniversal : .ypBlackUniversal)
                     .padding(.leading, 16)
                     .lineLimit(1)
                     .truncationMode(.tail)

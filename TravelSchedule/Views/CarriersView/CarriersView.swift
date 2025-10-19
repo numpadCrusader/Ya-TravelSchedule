@@ -62,7 +62,7 @@ struct CarriersView: View {
         VStack(alignment: .leading, spacing: 16) {
             Text("\(fromLocation) → \(toLocation)")
                 .font(.system(size: 24, weight: .bold))
-                .foregroundStyle(.ypBlack)
+                .foregroundStyle(.ypBlackDynamic)
                 .padding(.horizontal, 16)
             
             ScrollView {
@@ -95,7 +95,7 @@ struct CarriersView: View {
                     .font(.system(size: 17, weight: .bold))
                     .frame(maxWidth: .infinity)
                     .frame(height: 60)
-                    .background(.ypBlue)
+                    .background(.ypBlueUniversal)
                     .cornerRadius(16)
                     .padding(.horizontal, 16)
                     .padding(.bottom, 24)
