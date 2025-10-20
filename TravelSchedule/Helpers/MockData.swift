@@ -95,4 +95,9 @@ enum MockData {
             isWatched: false
         )
     ]
+    
+    static let contacts: [Contact] = [
+        Contact(title: "E-mail", description: "i.lozgkina@yandex.ru"),
+        Contact(title: "Телефон", description: "+7 (904) 329-27-71")
+    ]
 }

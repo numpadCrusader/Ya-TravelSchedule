@@ -43,6 +43,8 @@
 		04A5A7562EA5174200DFE7A1 /* CarrierInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A7552EA5174200DFE7A1 /* CarrierInfoView.swift */; };
 		04B2B2FA2EA1569B000A53B3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2B2F92EA1569B000A53B3 /* SearchBar.swift */; };
 		04E307AF2EA691BC000CED60 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E307AE2EA691BC000CED60 /* MockData.swift */; };
+		04E307DF2EA69B9F000CED60 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E307DE2EA69B9F000CED60 /* ContactRow.swift */; };
+		04E307EA2EA69C3E000CED60 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E307E92EA69C3E000CED60 /* Contact.swift */; };
 		04F5EC142E65848C00669B37 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 04F5EC132E65848C00669B37 /* OpenAPIRuntime */; };
 		04F5EC172E6584A200669B37 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 04F5EC162E6584A200669B37 /* OpenAPIURLSession */; };
 		04F5EC1C2E6585BB00669B37 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 04F5EC1B2E6585BB00669B37 /* openapi.yaml */; };
@@ -87,6 +89,8 @@
 		04A5A7552EA5174200DFE7A1 /* CarrierInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierInfoView.swift; sourceTree = "<group>"; };
 		04B2B2F92EA1569B000A53B3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		04E307AE2EA691BC000CED60 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		04E307DE2EA69B9F000CED60 /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
+		04E307E92EA69C3E000CED60 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		04F5EC1B2E6585BB00669B37 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		04F5EC1D2E65862E00669B37 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -302,6 +306,7 @@
 		04A5A7532EA5172900DFE7A1 /* CarrierInfoView */ = {
 			isa = PBXGroup;
 			children = (
+				04E307D62EA69A9A000CED60 /* Subviews */,
 				04A5A7552EA5174200DFE7A1 /* CarrierInfoView.swift */,
 			);
 			path = CarrierInfoView;
@@ -330,6 +335,15 @@
 				04E307AE2EA691BC000CED60 /* MockData.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		04E307D62EA69A9A000CED60 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				04E307DE2EA69B9F000CED60 /* ContactRow.swift */,
+				04E307E92EA69C3E000CED60 /* Contact.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		04F5EC1A2E65859D00669B37 /* OpenAPI */ = {
@@ -451,10 +465,12 @@
 				045B21C82E83B3E000DF5EC5 /* MainView.swift in Sources */,
 				048D02692E36AC4300ECB49C /* TravelScheduleApp.swift in Sources */,
 				045B22202E83F35E00DF5EC5 /* CitySelectionView.swift in Sources */,
+				04E307EA2EA69C3E000CED60 /* Contact.swift in Sources */,
 				045B21C62E83B34300DF5EC5 /* SettingsView.swift in Sources */,
 				04A5A7562EA5174200DFE7A1 /* CarrierInfoView.swift in Sources */,
 				04A5A6462EA3F31B00DFE7A1 /* CarrierCardView.swift in Sources */,
 				04A5A6D02EA4DA0400DFE7A1 /* TimeRange.swift in Sources */,
+				04E307DF2EA69B9F000CED60 /* ContactRow.swift in Sources */,
 				045B21C42E83B33200DF5EC5 /* ScheduleView.swift in Sources */,
 				047914722E73DC0300FEAC8F /* CopyrightService.swift in Sources */,
 			);
