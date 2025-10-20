@@ -15,9 +15,14 @@ struct ScheduleView: View {
     @State private var showCitySelection = false
     @State private var showCarriers = false
     
+    @State private var selectedStory: Story?
+    let stories = MockData.stories
+    
     var body: some View {
         VStack {
-            StoryCarouselView()
+            StoryCarouselView(stories: stories) { story in
+                selectedStory = story
+            }
             
             RoutePicker(
                 fromLocation: $fromLocation,
@@ -72,6 +77,9 @@ struct ScheduleView: View {
                     CarriersView(fromLocation: from, toLocation: to)
                 }
             }
+        }
+        .fullScreenCover(item: $selectedStory) { story in
+            StoryDetailView(stories: stories)
         }
     }
 }

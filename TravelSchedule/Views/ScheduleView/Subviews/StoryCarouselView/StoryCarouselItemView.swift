@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StoryCarouselItemView: View {
-    let story: StoryCarouselItem
+    let story: Story
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
@@ -34,14 +34,4 @@ struct StoryCarouselItemView: View {
         .frame(width: 92, height: 140)
         .contentShape(RoundedRectangle(cornerRadius: 16))
     }
-}
-
-#Preview {
-    StoryCarouselItemView(
-        story: StoryCarouselItem(
-            title: "Text Text Text Text Text Text Text Text Text",
-            imageResource: .imStoryBackground1,
-            isWatched: true
-        )
-    )
 }

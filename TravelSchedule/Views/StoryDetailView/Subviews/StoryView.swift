@@ -11,7 +11,7 @@ struct StoryView: View {
     let story: Story
     
     var body: some View {
-        Image(story.backgroundColor)
+        Image(story.imageResource)
             .ignoresSafeArea()
             .overlay(
                 VStack {
@@ -30,8 +30,4 @@ struct StoryView: View {
             )
         
     }
-}
-
-#Preview {
-    StoryView(story: .story1)
 }

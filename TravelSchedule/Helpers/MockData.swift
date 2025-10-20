@@ -53,44 +53,34 @@ enum MockData {
         )
     ]
     
-    static let storyCarouselItems: [StoryCarouselItem] = [
-        StoryCarouselItem(
-            title: "Text Text Text Text Text Text Text Text Text",
-            imageResource: .imStoryBackground1,
-            isWatched: true
-        ),
-        StoryCarouselItem(
-            title: "Text Text Text Text Text Text Text Text Text",
+    static let stories: [Story] = [
+        Story(
+            title: "Text Text Text Text Text Text Text Text Text Text",
+            description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
             imageResource: .imStoryBackground1,
             isWatched: false
         ),
-        StoryCarouselItem(
-            title: "Text Text Text Text Text Text Text Text Text",
-            imageResource: .imStoryBackground1,
-            isWatched: true
-        ),
-        StoryCarouselItem(
-            title: "Text Text Text Text Text Text Text Text Text",
-            imageResource: .imStoryBackground1,
+        Story(
+            title: "Text Text Text Text Text Text Text Text Text Text",
+            description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground2,
             isWatched: false
         ),
-        StoryCarouselItem(
-            title: "Text Text Text Text Text Text Text Text Text",
-            imageResource: .imStoryBackground1,
-            isWatched: true
-        ),
-        StoryCarouselItem(
-            title: "Text Text Text Text Text Text Text Text Text",
-            imageResource: .imStoryBackground1,
+        Story(
+            title: "Text Text Text Text Text Text Text Text Text Text",
+            description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground3,
             isWatched: false
         ),
-        StoryCarouselItem(
-            title: "Text Text Text Text Text Text Text Text Text",
-            imageResource: .imStoryBackground1,
-            isWatched: true
+        Story(
+            title: "Text Text Text Text Text Text Text Text Text Text",
+            description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground4,
+            isWatched: false
         ),
-        StoryCarouselItem(
-            title: "Text Text Text Text Text Text Text Text Text",
+        Story(
+            title: "Text Text Text Text Text Text Text Text Text Text",
+            description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
             imageResource: .imStoryBackground1,
             isWatched: false
         )

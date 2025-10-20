@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct StoryCarouselView: View {
-    let stories: [StoryCarouselItem] = MockData.storyCarouselItems
+    let stories: [Story]
+    let onSelect: (Story) -> Void
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 12) {
                 ForEach(stories) { story in
-                    StoryCarouselItemView(story: story)
+                    Button {
+                        onSelect(story)
+                    } label: {
+                        StoryCarouselItemView(story: story)
+                    }
                 }
             }
             .padding(.horizontal, 16)
@@ -24,5 +29,5 @@ struct StoryCarouselView: View {
 }
 
 #Preview {
-    StoryCarouselView()
+    StoryCarouselView(stories: MockData.stories) { _ in }
 }

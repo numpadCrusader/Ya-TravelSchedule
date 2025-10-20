@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		041374C02EA617790019A36C /* PickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041374BF2EA617790019A36C /* PickerType.swift */; };
 		041374C52EA619B20019A36C /* StoryCarouselItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041374C42EA619B20019A36C /* StoryCarouselItemView.swift */; };
-		041374E42EA637A20019A36C /* StoryCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041374E32EA637A20019A36C /* StoryCarouselItem.swift */; };
+		041374E42EA637A20019A36C /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041374E32EA637A20019A36C /* Story.swift */; };
 		041374F22EA63AA50019A36C /* StoryCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041374F12EA63AA50019A36C /* StoryCarouselView.swift */; };
 		0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */; };
 		045B21B32E83A64300DF5EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */; };
@@ -55,7 +55,6 @@
 		04E308752EA6B4F9000CED60 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E308742EA6B4F9000CED60 /* StoryView.swift */; };
 		04E308792EA6B509000CED60 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E308782EA6B509000CED60 /* CloseButton.swift */; };
 		04E3087D2EA6B519000CED60 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3087C2EA6B519000CED60 /* ProgressBar.swift */; };
-		04E308822EA6B539000CED60 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E308812EA6B539000CED60 /* Story.swift */; };
 		04E308862EA6B549000CED60 /* TimerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E308852EA6B549000CED60 /* TimerConfiguration.swift */; };
 		04E308892EA6B576000CED60 /* TimerConfiguration+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E308882EA6B576000CED60 /* TimerConfiguration+Calculations.swift */; };
 		04F5EC142E65848C00669B37 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 04F5EC132E65848C00669B37 /* OpenAPIRuntime */; };
@@ -67,7 +66,7 @@
 /* Begin PBXFileReference section */
 		041374BF2EA617790019A36C /* PickerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerType.swift; sourceTree = "<group>"; };
 		041374C42EA619B20019A36C /* StoryCarouselItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCarouselItemView.swift; sourceTree = "<group>"; };
-		041374E32EA637A20019A36C /* StoryCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCarouselItem.swift; sourceTree = "<group>"; };
+		041374E32EA637A20019A36C /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		041374F12EA63AA50019A36C /* StoryCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCarouselView.swift; sourceTree = "<group>"; };
 		0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChevronRow.swift; sourceTree = "<group>"; };
 		045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +113,6 @@
 		04E308742EA6B4F9000CED60 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		04E308782EA6B509000CED60 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		04E3087C2EA6B519000CED60 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
-		04E308812EA6B539000CED60 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		04E308852EA6B549000CED60 /* TimerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerConfiguration.swift; sourceTree = "<group>"; };
 		04E308882EA6B576000CED60 /* TimerConfiguration+Calculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerConfiguration+Calculations.swift"; sourceTree = "<group>"; };
 		04F5EC1B2E6585BB00669B37 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
@@ -147,7 +145,7 @@
 			children = (
 				041374F12EA63AA50019A36C /* StoryCarouselView.swift */,
 				041374C42EA619B20019A36C /* StoryCarouselItemView.swift */,
-				041374E32EA637A20019A36C /* StoryCarouselItem.swift */,
+				041374E32EA637A20019A36C /* Story.swift */,
 			);
 			path = StoryCarouselView;
 			sourceTree = "<group>";
@@ -419,7 +417,6 @@
 			isa = PBXGroup;
 			children = (
 				04E308852EA6B549000CED60 /* TimerConfiguration.swift */,
-				04E308812EA6B539000CED60 /* Story.swift */,
 				04E308882EA6B576000CED60 /* TimerConfiguration+Calculations.swift */,
 			);
 			path = Models;
@@ -527,7 +524,7 @@
 				047914642E73D03200FEAC8F /* ScheduleBetweenStationsService.swift in Sources */,
 				04E308252EA6A6EC000CED60 /* AppStorageKeys.swift in Sources */,
 				047914702E73DB6700FEAC8F /* AllStationsService.swift in Sources */,
-				041374E42EA637A20019A36C /* StoryCarouselItem.swift in Sources */,
+				041374E42EA637A20019A36C /* Story.swift in Sources */,
 				04A5A5DC2EA39A6000DFE7A1 /* StationSelectionView.swift in Sources */,
 				048D026B2E36AC4300ECB49C /* ContentView.swift in Sources */,
 				04E308862EA6B549000CED60 /* TimerConfiguration.swift in Sources */,
@@ -552,7 +549,6 @@
 				047914672E73D2A500FEAC8F /* StationScheduleService.swift in Sources */,
 				04A5A6EC2EA4E03B00DFE7A1 /* TextRadioButtonRow.swift in Sources */,
 				045B21C82E83B3E000DF5EC5 /* MainView.swift in Sources */,
-				04E308822EA6B539000CED60 /* Story.swift in Sources */,
 				04E308102EA6A3CF000CED60 /* TextToggleRow.swift in Sources */,
 				04E308752EA6B4F9000CED60 /* StoryView.swift in Sources */,
 				048D02692E36AC4300ECB49C /* TravelScheduleApp.swift in Sources */,
