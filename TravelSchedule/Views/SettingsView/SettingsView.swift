@@ -8,20 +8,45 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @AppStorage(AppStorageKeys.darkModeEnabled.rawValue) private var darkModeEnabled = false
+    
+    @State private var showCopyright = false
+    
     var body: some View {
         VStack {
+            VStack {
+                TextToggleRow(text: "Темная тема", isEnabled: $darkModeEnabled)
+                
+                Button {
+                    showCopyright = true
+                } label: {
+                    TextChevronRow(text: "Пользовательское соглашение")
+                }
+            }
+            .padding(.horizontal, 16)
+            
             Spacer()
             
-            ErrorView(errorType: .noInternet)
-//            ErrorView(errorType: .serverError)
-            
-            Spacer()
+            VStack(spacing: 16) {
+                Text("Приложение использует API «Яндекс.Расписания»")
+                Text("Версия 1.0 (beta)")
+            }
+            .font(.system(size: 12, weight: .regular))
+            .foregroundStyle(.ypBlackDynamic)
+            .padding(.horizontal, 16)
+            .padding(.bottom, 24)
             
             Divider()
                 .background(.black.opacity(0.3))
                 .padding(.bottom, 0.5)
         }
+        .padding(.top, 24)
         .background(.ypWhiteDynamic)
+        .fullScreenCover(isPresented: $showCopyright) {
+            NavigationStack {
+                CopyrightView()
+            }
+        }
     }
 }
 
