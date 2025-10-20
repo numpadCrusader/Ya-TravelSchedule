@@ -59,7 +59,7 @@ enum MockData {
             title: "Text Text Text Text Text Text Text Text Text Text",
             description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
             imageResource: .imStoryBackground1,
-            isWatched: false
+            isWatched: true
         ),
         Story(
             id: 1,
@@ -80,7 +80,7 @@ enum MockData {
             title: "Text Text Text Text Text Text Text Text Text Text",
             description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
             imageResource: .imStoryBackground4,
-            isWatched: false
+            isWatched: true
         ),
         Story(
             id: 4,

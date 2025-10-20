@@ -79,7 +79,7 @@ struct ScheduleView: View {
             }
         }
         .fullScreenCover(item: $selectedStory) { story in
-            StoryDetailView(stories: stories)
+            StoryDetailView(stories: stories, initialIndex: story.id)
         }
     }
 }

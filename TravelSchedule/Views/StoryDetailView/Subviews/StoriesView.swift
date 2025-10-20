@@ -13,6 +13,13 @@ struct StoriesView: View {
     @State var currentStoryIndex: Int = 0
     @State var currentProgress: CGFloat = 0
     
+    init(stories: [Story], currentStoryIndex: Int = 0) {
+        self.stories = stories
+        let config = TimerConfiguration(storiesCount: stories.count)
+        _currentStoryIndex = State(initialValue: currentStoryIndex)
+        _currentProgress = State(initialValue: config.progress(for: currentStoryIndex))
+    }
+    
     var body: some View {
         ZStack(alignment: .topTrailing) {
             StoriesTabView(stories: stories, currentStoryIndex: $currentStoryIndex)
