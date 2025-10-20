@@ -12,7 +12,7 @@ struct CarrierCardView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
-            HStack(alignment: .center, spacing: 8) {
+            HStack(spacing: 8) {
                 Image(.icBrand1)
                     .resizable()
                     .scaledToFit()

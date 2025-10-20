@@ -15,53 +15,10 @@ struct CarriersView: View {
     
     let fromLocation: String
     let toLocation: String
-    let carriers: [Carrier] = [
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: false
-        ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: true
-        ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: false
-        ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: true
-        ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: true
-        ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: false
-        )
-    ]
+    let carriers: [Carrier] = MockData.carriers
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("\(fromLocation) → \(toLocation)")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.ypBlackDynamic)
@@ -121,7 +78,7 @@ struct CarriersView: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 60)
                     .background(.ypBlueUniversal)
-                    .cornerRadius(16)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
                     .padding(.horizontal, 16)
                     .padding(.bottom, 24)
             }

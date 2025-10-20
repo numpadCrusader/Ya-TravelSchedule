@@ -40,7 +40,7 @@ struct ScheduleView: View {
                         .font(.system(size: 17, weight: .bold))
                         .frame(width: 150, height: 60)
                         .background(.ypBlueUniversal)
-                        .cornerRadius(16)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
             }
             

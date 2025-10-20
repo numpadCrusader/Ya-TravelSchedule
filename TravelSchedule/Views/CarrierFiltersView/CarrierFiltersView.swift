@@ -11,7 +11,7 @@ struct CarrierFiltersView: View {
     @Environment(\.dismiss) private var dismiss
     
     @State private var selectedTimes: Set<TimeRange> = []
-    @State private var showTransfers: Bool? = nil
+    @State private var showTransfers: Bool?
     
     let onFinish: (Set<TimeRange>, Bool) -> Void
     
@@ -64,8 +64,7 @@ struct CarrierFiltersView: View {
             
             Spacer()
         }
-        .padding(.top, 16)
-        .padding(.horizontal, 16)
+        .padding([.top, .horizontal], 16)
         .background(.ypWhiteDynamic)
         .navigationBarBackButtonHidden(true)
         .toolbar {
@@ -88,7 +87,7 @@ struct CarrierFiltersView: View {
                         .frame(maxWidth: .infinity)
                         .frame(height: 60)
                         .background(.ypBlueUniversal)
-                        .cornerRadius(16)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
                         .padding(.horizontal, 16)
                         .padding(.bottom, 24)
                 }
