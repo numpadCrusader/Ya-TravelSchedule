@@ -73,10 +73,6 @@ struct ScheduleView: View {
     }
 }
 
-enum PickerType: Hashable {
-    case from, to
-}
-
 #Preview {
     ScheduleView()
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041374C02EA617790019A36C /* PickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041374BF2EA617790019A36C /* PickerType.swift */; };
 		0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */; };
 		045B21B32E83A64300DF5EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */; };
 		045B21C42E83B33200DF5EC5 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21C32E83B33200DF5EC5 /* ScheduleView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041374BF2EA617790019A36C /* PickerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerType.swift; sourceTree = "<group>"; };
 		0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChevronRow.swift; sourceTree = "<group>"; };
 		045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045B21C32E83B33200DF5EC5 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041374BC2EA6176B0019A36C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				041374BF2EA617790019A36C /* PickerType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		045B21C22E83B32100DF5EC5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		045B21E02E83C48A00DF5EC5 /* ScheduleView */ = {
 			isa = PBXGroup;
 			children = (
+				041374BC2EA6176B0019A36C /* Models */,
 				045B21E32E83C49100DF5EC5 /* Subviews */,
 				045B21C32E83B33200DF5EC5 /* ScheduleView.swift */,
 			);
@@ -401,6 +412,7 @@
 				048CA2942E65877600C200C2 /* NearestStationsService.swift in Sources */,
 				04A5A6E32EA4DE3900DFE7A1 /* TextCheckboxRow.swift in Sources */,
 				04A5A6202EA3E14400DFE7A1 /* CarriersView.swift in Sources */,
+				041374C02EA617790019A36C /* PickerType.swift in Sources */,
 				04A5A6382EA3F2A100DFE7A1 /* Carrier.swift in Sources */,
 				047914672E73D2A500FEAC8F /* StationScheduleService.swift in Sources */,
 				04A5A6EC2EA4E03B00DFE7A1 /* TextRadioButtonRow.swift in Sources */,
