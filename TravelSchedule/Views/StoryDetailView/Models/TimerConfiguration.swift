@@ -14,8 +14,8 @@ struct TimerConfiguration {
     
     init(
         storiesCount: Int,
-        secondsPerStory: TimeInterval = 5,
-        timerTickInternal: TimeInterval = 0.05
+        secondsPerStory: TimeInterval = 10,
+        timerTickInternal: TimeInterval = 0.1
     ) {
         self.storiesCount = storiesCount
         self.timerTickInternal = timerTickInternal

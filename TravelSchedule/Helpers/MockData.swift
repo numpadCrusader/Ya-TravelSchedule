@@ -55,30 +55,35 @@ enum MockData {
     
     static let stories: [Story] = [
         Story(
+            id: 0,
             title: "Text Text Text Text Text Text Text Text Text Text",
             description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
             imageResource: .imStoryBackground1,
             isWatched: false
         ),
         Story(
+            id: 1,
             title: "Text Text Text Text Text Text Text Text Text Text",
             description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
             imageResource: .imStoryBackground2,
             isWatched: false
         ),
         Story(
+            id: 2,
             title: "Text Text Text Text Text Text Text Text Text Text",
             description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
             imageResource: .imStoryBackground3,
             isWatched: false
         ),
         Story(
+            id: 3,
             title: "Text Text Text Text Text Text Text Text Text Text",
             description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
             imageResource: .imStoryBackground4,
             isWatched: false
         ),
         Story(
+            id: 4,
             title: "Text Text Text Text Text Text Text Text Text Text",
             description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
             imageResource: .imStoryBackground1,

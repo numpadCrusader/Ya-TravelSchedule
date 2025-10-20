@@ -20,8 +20,9 @@ struct StoryDetailView: View {
             CloseButton {
                 dismiss()
             }
-            .padding(.top, 57)
+            .padding(.top, 50)
             .padding(.trailing, 12)
         }
+        .background(.ypBlackUniversal)
     }
 }

@@ -30,6 +30,7 @@ struct StoryCarouselItemView: View {
                 .truncationMode(.tail)
                 .padding(.horizontal, 8)
                 .padding(.bottom, 12)
+                .multilineTextAlignment(.leading)
         }
         .frame(width: 92, height: 140)
         .contentShape(RoundedRectangle(cornerRadius: 16))

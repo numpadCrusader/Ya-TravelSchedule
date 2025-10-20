@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension CGFloat {
-    static let progressBarCornerRadius: CGFloat = 6
+    static let progressBarCornerRadius: CGFloat = 3
     static let progressBarHeight: CGFloat = 6
 }
 
@@ -21,7 +21,7 @@ struct ProgressBar: View {
             ZStack(alignment: .leading) {
                 RoundedRectangle(cornerRadius: .progressBarCornerRadius)
                     .frame(width: geometry.size.width, height: .progressBarHeight)
-                    .foregroundColor(.white)
+                    .foregroundColor(.ypWhiteUniversal)
                 
                 RoundedRectangle(cornerRadius: .progressBarCornerRadius)
                     .frame(
@@ -57,7 +57,7 @@ private struct MaskFragmentView: View {
         RoundedRectangle(cornerRadius: .progressBarCornerRadius)
             .fixedSize(horizontal: false, vertical: true)
             .frame(height: .progressBarHeight)
-            .foregroundStyle(.white)
+            .foregroundStyle(.ypWhiteUniversal)
     }
 }
 
