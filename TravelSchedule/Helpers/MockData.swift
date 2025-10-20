@@ -52,4 +52,47 @@ enum MockData {
             hasTransfer: false
         )
     ]
+    
+    static let storyCarouselItems: [StoryCarouselItem] = [
+        StoryCarouselItem(
+            title: "Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground1,
+            isWatched: true
+        ),
+        StoryCarouselItem(
+            title: "Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground1,
+            isWatched: false
+        ),
+        StoryCarouselItem(
+            title: "Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground1,
+            isWatched: true
+        ),
+        StoryCarouselItem(
+            title: "Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground1,
+            isWatched: false
+        ),
+        StoryCarouselItem(
+            title: "Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground1,
+            isWatched: true
+        ),
+        StoryCarouselItem(
+            title: "Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground1,
+            isWatched: false
+        ),
+        StoryCarouselItem(
+            title: "Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground1,
+            isWatched: true
+        ),
+        StoryCarouselItem(
+            title: "Text Text Text Text Text Text Text Text Text",
+            imageResource: .imStoryBackground1,
+            isWatched: false
+        )
+    ]
 }

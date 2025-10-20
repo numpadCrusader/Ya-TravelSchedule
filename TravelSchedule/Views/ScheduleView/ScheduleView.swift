@@ -16,7 +16,9 @@ struct ScheduleView: View {
     @State private var showCarriers = false
     
     var body: some View {
-        VStack(spacing: 16) {
+        VStack {
+            StoryCarouselView()
+            
             RoutePicker(
                 fromLocation: $fromLocation,
                 toLocation: $toLocation,
@@ -29,7 +31,7 @@ struct ScheduleView: View {
                     showCitySelection = true
                 }
             )
-            .padding(.top, 208)
+            .padding(.top, 20)
             
             if fromLocation != nil, toLocation != nil {
                 Button() {
@@ -42,6 +44,7 @@ struct ScheduleView: View {
                         .background(.ypBlueUniversal)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
+                .padding(.top, 16)
             }
             
             Spacer()
