@@ -42,7 +42,7 @@ struct RoutePicker: View {
     }
 }
 
-struct RoutePickerButton: View {
+private struct RoutePickerButton: View {
     let title: String
     let isPlaceholder: Bool
     let action: () -> Void

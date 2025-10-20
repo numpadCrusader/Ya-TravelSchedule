@@ -41,6 +41,7 @@
 		04A5A7252EA4F96700DFE7A1 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A7242EA4F96700DFE7A1 /* ErrorType.swift */; };
 		04A5A7562EA5174200DFE7A1 /* CarrierInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A7552EA5174200DFE7A1 /* CarrierInfoView.swift */; };
 		04B2B2FA2EA1569B000A53B3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2B2F92EA1569B000A53B3 /* SearchBar.swift */; };
+		04E307AF2EA691BC000CED60 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E307AE2EA691BC000CED60 /* MockData.swift */; };
 		04F5EC142E65848C00669B37 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 04F5EC132E65848C00669B37 /* OpenAPIRuntime */; };
 		04F5EC172E6584A200669B37 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 04F5EC162E6584A200669B37 /* OpenAPIURLSession */; };
 		04F5EC1C2E6585BB00669B37 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 04F5EC1B2E6585BB00669B37 /* openapi.yaml */; };
@@ -83,6 +84,7 @@
 		04A5A7242EA4F96700DFE7A1 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		04A5A7552EA5174200DFE7A1 /* CarrierInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierInfoView.swift; sourceTree = "<group>"; };
 		04B2B2F92EA1569B000A53B3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		04E307AE2EA691BC000CED60 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		04F5EC1B2E6585BB00669B37 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		04F5EC1D2E65862E00669B37 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +197,7 @@
 		048D02672E36AC4300ECB49C /* TravelSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				04E307A82EA691AE000CED60 /* Helpers */,
 				045B21C22E83B32100DF5EC5 /* Views */,
 				048CA2922E65876000C200C2 /* Network Services */,
 				04F5EC1A2E65859D00669B37 /* OpenAPI */,
@@ -318,6 +321,14 @@
 			path = SettingsView;
 			sourceTree = "<group>";
 		};
+		04E307A82EA691AE000CED60 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				04E307AE2EA691BC000CED60 /* MockData.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		04F5EC1A2E65859D00669B37 /* OpenAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E307AF2EA691BC000CED60 /* MockData.swift in Sources */,
 				0479146E2E73D87D00FEAC8F /* CarrierInfoService.swift in Sources */,
 				04A5A7252EA4F96700DFE7A1 /* ErrorType.swift in Sources */,
 				04A5A69D2EA4102A00DFE7A1 /* CarrierFiltersView.swift in Sources */,

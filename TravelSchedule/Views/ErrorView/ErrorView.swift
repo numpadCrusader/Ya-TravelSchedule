@@ -12,7 +12,7 @@ struct ErrorView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
-            Image(errorType.imageName)
+            Image(errorType.imageResource)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 223, height: 223)

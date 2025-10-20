@@ -5,15 +5,15 @@
 //  Created by Nikita Khon on 19.10.2025.
 //
 
-import Foundation
+import SwiftUI
 
 enum ErrorType {
     case serverError, noInternet
     
-    var imageName: String {
+    var imageResource: ImageResource {
         switch self {
-            case .serverError: "im_server_error"
-            case .noInternet: "im_no_internet"
+            case .serverError: .imServerError
+            case .noInternet: .imNoInternet
         }
     }
     
