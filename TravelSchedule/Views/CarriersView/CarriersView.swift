@@ -46,6 +46,9 @@ struct CarriersView: View {
                         }
                     }
                 }
+                .safeAreaInset(edge: .bottom) {
+                    Color.clear.frame(height: 84)
+                }
                 .padding(.top, 16)
             }
         }

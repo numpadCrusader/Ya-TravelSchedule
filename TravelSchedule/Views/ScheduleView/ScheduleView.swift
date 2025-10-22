@@ -15,21 +15,28 @@ struct ScheduleView: View {
     @State private var showCitySelection = false
     @State private var showCarriers = false
     
+    @State private var selectedStory: Story?
+    let stories = MockData.stories
+    
     var body: some View {
-        VStack(spacing: 16) {
+        VStack {
+            StoryCarouselView(stories: stories) { story in
+                selectedStory = story
+            }
+            
             RoutePicker(
                 fromLocation: $fromLocation,
                 toLocation: $toLocation,
                 onSelectFrom: {
-                    selectedPickerType = .from
+                    selectedPickerType = .fromLocation
                     showCitySelection = true
                 },
                 onSelectTo: {
-                    selectedPickerType = .to
+                    selectedPickerType = .toLocation
                     showCitySelection = true
                 }
             )
-            .padding(.top, 208)
+            .padding(.top, 20)
             
             if fromLocation != nil, toLocation != nil {
                 Button() {
@@ -42,6 +49,7 @@ struct ScheduleView: View {
                         .background(.ypBlueUniversal)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
+                .padding(.top, 16)
             }
             
             Spacer()
@@ -54,7 +62,7 @@ struct ScheduleView: View {
         .fullScreenCover(isPresented: $showCitySelection) {
             NavigationStack {
                 CitySelectionView { city, station in
-                    if selectedPickerType == .from {
+                    if selectedPickerType == .fromLocation {
                         fromLocation = "\(city) (\(station))"
                     } else {
                         toLocation = "\(city) (\(station))"
@@ -70,11 +78,10 @@ struct ScheduleView: View {
                 }
             }
         }
+        .fullScreenCover(item: $selectedStory) { story in
+            StoryDetailView(stories: stories, initialIndex: story.id)
+        }
     }
-}
-
-enum PickerType: Hashable {
-    case from, to
 }
 
 #Preview {
