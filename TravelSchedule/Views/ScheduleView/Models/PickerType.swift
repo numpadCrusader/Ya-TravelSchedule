@@ -8,5 +8,5 @@
 import Foundation
 
 enum PickerType: Hashable {
-    case from, to
+    case fromLocation, toLocation
 }

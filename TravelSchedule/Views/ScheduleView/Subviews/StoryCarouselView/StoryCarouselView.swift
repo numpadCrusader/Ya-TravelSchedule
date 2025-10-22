@@ -12,7 +12,7 @@ struct StoryCarouselView: View {
     let onSelect: (Story) -> Void
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
+        ScrollView(.horizontal) {
             LazyHStack(spacing: 12) {
                 ForEach(stories) { story in
                     Button {
@@ -24,6 +24,7 @@ struct StoryCarouselView: View {
             }
             .padding(.horizontal, 16)
         }
+        .scrollIndicators(.hidden)
         .frame(height: 188)
     }
 }

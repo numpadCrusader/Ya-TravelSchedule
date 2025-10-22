@@ -28,11 +28,11 @@ struct ScheduleView: View {
                 fromLocation: $fromLocation,
                 toLocation: $toLocation,
                 onSelectFrom: {
-                    selectedPickerType = .from
+                    selectedPickerType = .fromLocation
                     showCitySelection = true
                 },
                 onSelectTo: {
-                    selectedPickerType = .to
+                    selectedPickerType = .toLocation
                     showCitySelection = true
                 }
             )
@@ -62,7 +62,7 @@ struct ScheduleView: View {
         .fullScreenCover(isPresented: $showCitySelection) {
             NavigationStack {
                 CitySelectionView { city, station in
-                    if selectedPickerType == .from {
+                    if selectedPickerType == .fromLocation {
                         fromLocation = "\(city) (\(station))"
                     } else {
                         toLocation = "\(city) (\(station))"
