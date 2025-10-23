@@ -11,6 +11,7 @@
 		041374C52EA619B20019A36C /* StoryCarouselItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041374C42EA619B20019A36C /* StoryCarouselItemView.swift */; };
 		041374E42EA637A20019A36C /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041374E32EA637A20019A36C /* Story.swift */; };
 		041374F22EA63AA50019A36C /* StoryCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041374F12EA63AA50019A36C /* StoryCarouselView.swift */; };
+		04445C902EA9F3100008A811 /* CitySelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04445C8F2EA9F3100008A811 /* CitySelectionViewModel.swift */; };
 		0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */; };
 		045B21B32E83A64300DF5EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */; };
 		045B21C42E83B33200DF5EC5 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21C32E83B33200DF5EC5 /* ScheduleView.swift */; };
@@ -69,6 +70,7 @@
 		041374C42EA619B20019A36C /* StoryCarouselItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCarouselItemView.swift; sourceTree = "<group>"; };
 		041374E32EA637A20019A36C /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		041374F12EA63AA50019A36C /* StoryCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCarouselView.swift; sourceTree = "<group>"; };
+		04445C8F2EA9F3100008A811 /* CitySelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionViewModel.swift; sourceTree = "<group>"; };
 		0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChevronRow.swift; sourceTree = "<group>"; };
 		045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045B21C32E83B33200DF5EC5 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,16 @@
 			path = StoryCarouselView;
 			sourceTree = "<group>";
 		};
+		04445C8D2EA9E3D00008A811 /* CitySelection */ = {
+			isa = PBXGroup;
+			children = (
+				04B2B3002EA15781000A53B3 /* Subviews */,
+				045B221F2E83F35E00DF5EC5 /* CitySelectionView.swift */,
+				04445C8F2EA9F3100008A811 /* CitySelectionViewModel.swift */,
+			);
+			path = CitySelection;
+			sourceTree = "<group>";
+		};
 		045B21C22E83B32100DF5EC5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +172,6 @@
 				045B21C72E83B3E000DF5EC5 /* MainView.swift */,
 				04A5A71C2EA4F95100DFE7A1 /* ErrorView */,
 				04B5FC492E9D60700014CD18 /* SettingsView */,
-				045B221C2E83F34400DF5EC5 /* CitySelectionView */,
 				04A5A5DA2EA39A2E00DFE7A1 /* StationSelectionView */,
 				04A5A61E2EA3E10500DFE7A1 /* CarriersView */,
 				04A5A7532EA5172900DFE7A1 /* CarrierInfoView */,
@@ -176,15 +187,6 @@
 				045B21E62E83C55300DF5EC5 /* RoutePicker.swift */,
 			);
 			path = Subviews;
-			sourceTree = "<group>";
-		};
-		045B221C2E83F34400DF5EC5 /* CitySelectionView */ = {
-			isa = PBXGroup;
-			children = (
-				04B2B3002EA15781000A53B3 /* Subviews */,
-				045B221F2E83F35E00DF5EC5 /* CitySelectionView.swift */,
-			);
-			path = CitySelectionView;
 			sourceTree = "<group>";
 		};
 		048CA2922E65876000C200C2 /* Network Services */ = {
@@ -351,6 +353,7 @@
 		04D1813E2EA8E9FF0088055F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				04445C8D2EA9E3D00008A811 /* CitySelection */,
 				04D1813F2EA8EA060088055F /* Schedule */,
 			);
 			path = Scenes;
@@ -560,6 +563,7 @@
 				047914672E73D2A500FEAC8F /* StationScheduleService.swift in Sources */,
 				04A5A6EC2EA4E03B00DFE7A1 /* TextRadioButtonRow.swift in Sources */,
 				045B21C82E83B3E000DF5EC5 /* MainView.swift in Sources */,
+				04445C902EA9F3100008A811 /* CitySelectionViewModel.swift in Sources */,
 				04E308102EA6A3CF000CED60 /* TextToggleRow.swift in Sources */,
 				04E308752EA6B4F9000CED60 /* StoryView.swift in Sources */,
 				048D02692E36AC4300ECB49C /* TravelScheduleApp.swift in Sources */,

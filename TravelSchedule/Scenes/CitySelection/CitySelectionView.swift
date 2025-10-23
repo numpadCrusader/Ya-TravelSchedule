@@ -9,21 +9,15 @@ import SwiftUI
 
 struct CitySelectionView: View {
     @Environment(\.dismiss) private var dismiss
-    @State private var searchQuery = ""
-    @State private var selectedCity: String?
+    @StateObject private var viewModel = CitySelectionViewModel()
     
     let onComplete: (String, String) -> Void
     
-    let cities = [
-        "Москва", "Санкт Петербург", "Сочи", "Горный воздух",
-        "Краснодар", "Казань", "Омск"
-    ]
-    
     var body: some View {
         VStack {
-            SearchBar(text: $searchQuery, prompt: "Введите запрос")
+            SearchBar(text: $viewModel.searchQuery, prompt: "Введите запрос")
             
-            if searchResults.isEmpty {
+            if viewModel.searchResults.isEmpty {
                 VStack {
                     Spacer()
                     Text("Город не найден")
@@ -34,9 +28,9 @@ struct CitySelectionView: View {
                 }
             } else {
                 List {
-                    ForEach(searchResults, id: \.self) { city in
+                    ForEach(viewModel.searchResults, id: \.self) { city in
                         Button {
-                            selectedCity = city
+                            viewModel.select(city: city)
                         } label: {
                             TextChevronRow(text: city)
                         }
@@ -54,25 +48,17 @@ struct CitySelectionView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                Button() {
+                Button {
                     dismiss()
                 } label: {
                     Image(.icChevronLeft)
                 }
             }
         }
-        .navigationDestination(item: $selectedCity) { _ in
+        .navigationDestination(item: $viewModel.selectedCity) { city in
             StationSelectionView { station in
-                onComplete(selectedCity ?? "", station)
+                onComplete(city, station)
             }
-        }
-    }
-    
-    var searchResults: [String] {
-        if searchQuery.isEmpty {
-            cities
-        } else {
-            cities.filter { $0.localizedCaseInsensitiveContains(searchQuery) }
         }
     }
 }
