@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage(AppStorageKeys.darkModeEnabled.rawValue) private var darkModeEnabled = false
-    
-    @State private var showCopyright = false
+    @StateObject private var viewModel = SettingsViewModel()
     
     var body: some View {
         VStack {
             VStack {
-                TextToggleRow(text: "Темная тема", isEnabled: $darkModeEnabled)
+                TextToggleRow(
+                    text: "Темная тема",
+                    isEnabled: $viewModel.darkModeEnabled
+                )
                 
                 Button {
-                    showCopyright = true
+                    viewModel.openCopyright()
                 } label: {
                     TextChevronRow(text: "Пользовательское соглашение")
                 }
@@ -42,7 +43,7 @@ struct SettingsView: View {
         }
         .padding(.top, 24)
         .background(.ypWhiteDynamic)
-        .fullScreenCover(isPresented: $showCopyright) {
+        .fullScreenCover(isPresented: $viewModel.showCopyright) {
             NavigationStack {
                 CopyrightView()
             }

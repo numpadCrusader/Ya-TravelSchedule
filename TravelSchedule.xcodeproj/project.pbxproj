@@ -16,6 +16,7 @@
 		04445CA42EA9F8DC0008A811 /* CarriersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04445CA32EA9F8DC0008A811 /* CarriersViewModel.swift */; };
 		04445CB02EAA02E90008A811 /* CarrierInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04445CAF2EAA02E90008A811 /* CarrierInfoViewModel.swift */; };
 		04445CC62EAA074A0008A811 /* CarrierFiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04445CC52EAA074A0008A811 /* CarrierFiltersViewModel.swift */; };
+		04445CD32EAA0B7D0008A811 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04445CD22EAA0B7D0008A811 /* SettingsViewModel.swift */; };
 		0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */; };
 		045B21B32E83A64300DF5EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */; };
 		045B21C42E83B33200DF5EC5 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21C32E83B33200DF5EC5 /* ScheduleView.swift */; };
@@ -79,6 +80,7 @@
 		04445CA32EA9F8DC0008A811 /* CarriersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarriersViewModel.swift; sourceTree = "<group>"; };
 		04445CAF2EAA02E90008A811 /* CarrierInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierInfoViewModel.swift; sourceTree = "<group>"; };
 		04445CC52EAA074A0008A811 /* CarrierFiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierFiltersViewModel.swift; sourceTree = "<group>"; };
+		04445CD22EAA0B7D0008A811 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChevronRow.swift; sourceTree = "<group>"; };
 		045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045B21C32E83B33200DF5EC5 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
@@ -221,9 +223,22 @@
 		04445CC42EAA072F0008A811 /* CarrierFilters */ = {
 			isa = PBXGroup;
 			children = (
+				04A5A6DE2EA4DE1300DFE7A1 /* Subviews */,
+				04A5A6C82EA4D9EC00DFE7A1 /* Models */,
+				04A5A69C2EA4102A00DFE7A1 /* CarrierFiltersView.swift */,
 				04445CC52EAA074A0008A811 /* CarrierFiltersViewModel.swift */,
 			);
 			path = CarrierFilters;
+			sourceTree = "<group>";
+		};
+		04445CCF2EAA0A650008A811 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				04E3080A2EA6A3BE000CED60 /* Subviews */,
+				045B21C52E83B34300DF5EC5 /* SettingsView.swift */,
+				04445CD22EAA0B7D0008A811 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		045B21C22E83B32100DF5EC5 /* Views */ = {
@@ -232,8 +247,6 @@
 				04E308632EA6B44E000CED60 /* StoryDetailView */,
 				04E308392EA6A9BB000CED60 /* CopyrightView */,
 				04A5A71C2EA4F95100DFE7A1 /* ErrorView */,
-				04B5FC492E9D60700014CD18 /* SettingsView */,
-				04A5A6A12EA4103100DFE7A1 /* CarrierFiltersView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,16 +333,6 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
-		04A5A6A12EA4103100DFE7A1 /* CarrierFiltersView */ = {
-			isa = PBXGroup;
-			children = (
-				04A5A6DE2EA4DE1300DFE7A1 /* Subviews */,
-				04A5A6C82EA4D9EC00DFE7A1 /* Models */,
-				04A5A69C2EA4102A00DFE7A1 /* CarrierFiltersView.swift */,
-			);
-			path = CarrierFiltersView;
-			sourceTree = "<group>";
-		};
 		04A5A6C82EA4D9EC00DFE7A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,18 +376,10 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
-		04B5FC492E9D60700014CD18 /* SettingsView */ = {
-			isa = PBXGroup;
-			children = (
-				04E3080A2EA6A3BE000CED60 /* Subviews */,
-				045B21C52E83B34300DF5EC5 /* SettingsView.swift */,
-			);
-			path = SettingsView;
-			sourceTree = "<group>";
-		};
 		04D1813E2EA8E9FF0088055F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				04445CCF2EAA0A650008A811 /* Settings */,
 				04445CC42EAA072F0008A811 /* CarrierFilters */,
 				04445CAD2EA9FC9B0008A811 /* CarrierInfo */,
 				04445CA22EA9F8BC0008A811 /* Carriers */,
@@ -617,6 +612,7 @@
 				04445CB02EAA02E90008A811 /* CarrierInfoViewModel.swift in Sources */,
 				045B21C42E83B33200DF5EC5 /* ScheduleView.swift in Sources */,
 				047914722E73DC0300FEAC8F /* CopyrightService.swift in Sources */,
+				04445CD32EAA0B7D0008A811 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
