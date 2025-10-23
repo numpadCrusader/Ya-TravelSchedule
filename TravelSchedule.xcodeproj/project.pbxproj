@@ -218,6 +218,8 @@
 		04445CC02EAA06770008A811 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */,
+				048D026C2E36AC4500ECB49C /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -321,8 +323,6 @@
 				04F5EC1A2E65859D00669B37 /* OpenAPI */,
 				04445CC02EAA06770008A811 /* Resources */,
 				048D026A2E36AC4300ECB49C /* ContentView.swift */,
-				045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */,
-				048D026C2E36AC4500ECB49C /* Assets.xcassets */,
 				048D026E2E36AC4500ECB49C /* Preview Content */,
 			);
 			path = TravelSchedule;
@@ -754,7 +754,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Resources/LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -788,7 +788,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Resources/LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
