@@ -9,9 +9,7 @@ import SwiftUI
 
 struct CarrierFiltersView: View {
     @Environment(\.dismiss) private var dismiss
-    
-    @State private var selectedTimes: Set<TimeRange> = []
-    @State private var showTransfers: Bool?
+    @StateObject private var viewModel = CarrierFiltersViewModel()
     
     let onFinish: (Set<TimeRange>, Bool) -> Void
     
@@ -24,17 +22,11 @@ struct CarrierFiltersView: View {
                 
                 VStack {
                     ForEach(TimeRange.allCases, id: \.self) { range in
-                        let isRangeAdded = selectedTimes.contains(range)
-                        
                         TextCheckboxRow(
                             title: range.title,
-                            isChecked: isRangeAdded
+                            isChecked: viewModel.selectedTimes.contains(range)
                         ) {
-                            if isRangeAdded {
-                                selectedTimes.remove(range)
-                            } else {
-                                selectedTimes.insert(range)
-                            }
+                            viewModel.toggleTimeRange(range)
                         }
                     }
                 }
@@ -48,16 +40,16 @@ struct CarrierFiltersView: View {
                 VStack {
                     TextRadioButtonRow(
                         title: "Да",
-                        isSelected: showTransfers == true
+                        isSelected: viewModel.showTransfers == true
                     ) {
-                        showTransfers = true
+                        viewModel.setShowTransfers(true)
                     }
                     
                     TextRadioButtonRow(
                         title: "Нет",
-                        isSelected: showTransfers == false
+                        isSelected: viewModel.showTransfers == false
                     ) {
-                        showTransfers = false
+                        viewModel.setShowTransfers(false)
                     }
                 }
             }
@@ -77,9 +69,9 @@ struct CarrierFiltersView: View {
             }
         }
         .overlay(alignment: .bottom) {
-            if !selectedTimes.isEmpty, let showTransfers {
-                Button() {
-                    onFinish(selectedTimes, showTransfers)
+            if viewModel.canApply, let showTransfers = viewModel.showTransfers {
+                Button {
+                    onFinish(viewModel.selectedTimes, showTransfers)
                 } label: {
                     Text("Применить")
                         .foregroundColor(.ypWhiteUniversal)

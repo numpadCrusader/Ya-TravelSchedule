@@ -15,6 +15,7 @@
 		04445C9C2EA9F6AB0008A811 /* StationSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04445C9B2EA9F6AB0008A811 /* StationSelectionViewModel.swift */; };
 		04445CA42EA9F8DC0008A811 /* CarriersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04445CA32EA9F8DC0008A811 /* CarriersViewModel.swift */; };
 		04445CB02EAA02E90008A811 /* CarrierInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04445CAF2EAA02E90008A811 /* CarrierInfoViewModel.swift */; };
+		04445CC62EAA074A0008A811 /* CarrierFiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04445CC52EAA074A0008A811 /* CarrierFiltersViewModel.swift */; };
 		0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */; };
 		045B21B32E83A64300DF5EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */; };
 		045B21C42E83B33200DF5EC5 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21C32E83B33200DF5EC5 /* ScheduleView.swift */; };
@@ -77,6 +78,7 @@
 		04445C9B2EA9F6AB0008A811 /* StationSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionViewModel.swift; sourceTree = "<group>"; };
 		04445CA32EA9F8DC0008A811 /* CarriersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarriersViewModel.swift; sourceTree = "<group>"; };
 		04445CAF2EAA02E90008A811 /* CarrierInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierInfoViewModel.swift; sourceTree = "<group>"; };
+		04445CC52EAA074A0008A811 /* CarrierFiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierFiltersViewModel.swift; sourceTree = "<group>"; };
 		0452B6CC2EA2AA630031C9B8 /* TextChevronRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChevronRow.swift; sourceTree = "<group>"; };
 		045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045B21C32E83B33200DF5EC5 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
@@ -200,12 +202,35 @@
 			path = CarrierInfo;
 			sourceTree = "<group>";
 		};
+		04445CB92EAA06280008A811 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				048D02682E36AC4300ECB49C /* TravelScheduleApp.swift */,
+				045B21C72E83B3E000DF5EC5 /* MainView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		04445CC02EAA06770008A811 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04445CC42EAA072F0008A811 /* CarrierFilters */ = {
+			isa = PBXGroup;
+			children = (
+				04445CC52EAA074A0008A811 /* CarrierFiltersViewModel.swift */,
+			);
+			path = CarrierFilters;
+			sourceTree = "<group>";
+		};
 		045B21C22E83B32100DF5EC5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				04E308632EA6B44E000CED60 /* StoryDetailView */,
 				04E308392EA6A9BB000CED60 /* CopyrightView */,
-				045B21C72E83B3E000DF5EC5 /* MainView.swift */,
 				04A5A71C2EA4F95100DFE7A1 /* ErrorView */,
 				04B5FC492E9D60700014CD18 /* SettingsView */,
 				04A5A6A12EA4103100DFE7A1 /* CarrierFiltersView */,
@@ -256,12 +281,13 @@
 		048D02672E36AC4300ECB49C /* TravelSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				04445CB92EAA06280008A811 /* App */,
 				04D1813E2EA8E9FF0088055F /* Scenes */,
 				04E307A82EA691AE000CED60 /* Helpers */,
 				045B21C22E83B32100DF5EC5 /* Views */,
 				048CA2922E65876000C200C2 /* Network Services */,
 				04F5EC1A2E65859D00669B37 /* OpenAPI */,
-				048D02682E36AC4300ECB49C /* TravelScheduleApp.swift */,
+				04445CC02EAA06770008A811 /* Resources */,
 				048D026A2E36AC4300ECB49C /* ContentView.swift */,
 				045B21B22E83A64300DF5EC5 /* LaunchScreen.storyboard */,
 				048D026C2E36AC4500ECB49C /* Assets.xcassets */,
@@ -359,6 +385,7 @@
 		04D1813E2EA8E9FF0088055F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				04445CC42EAA072F0008A811 /* CarrierFilters */,
 				04445CAD2EA9FC9B0008A811 /* CarrierInfo */,
 				04445CA22EA9F8BC0008A811 /* Carriers */,
 				04445C9A2EA9F65E0008A811 /* StationSelection */,
@@ -549,6 +576,7 @@
 				047914702E73DB6700FEAC8F /* AllStationsService.swift in Sources */,
 				041374E42EA637A20019A36C /* Story.swift in Sources */,
 				04A5A5DC2EA39A6000DFE7A1 /* StationSelectionView.swift in Sources */,
+				04445CC62EAA074A0008A811 /* CarrierFiltersViewModel.swift in Sources */,
 				048D026B2E36AC4300ECB49C /* ContentView.swift in Sources */,
 				04E308862EA6B549000CED60 /* TimerConfiguration.swift in Sources */,
 				04E3087D2EA6B519000CED60 /* ProgressBar.swift in Sources */,
