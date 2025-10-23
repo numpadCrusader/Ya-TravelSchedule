@@ -9,8 +9,7 @@ import SwiftUI
 
 struct CarrierInfoView: View {
     @Environment(\.dismiss) private var dismiss
-    
-    let contacts: [Contact] = MockData.contacts
+    @StateObject private var viewModel = CarrierInfoViewModel()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -19,12 +18,12 @@ struct CarrierInfoView: View {
                 .scaledToFit()
                 .frame(height: 104)
             
-            Text("ОАО «РЖД»")
+            Text(viewModel.carrierName)
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.ypBlackDynamic)
             
             VStack(alignment: .leading) {
-                ForEach(MockData.contacts) { contact in
+                ForEach(viewModel.contacts) { contact in
                     ContactRow(contact: contact)
                 }
             }
