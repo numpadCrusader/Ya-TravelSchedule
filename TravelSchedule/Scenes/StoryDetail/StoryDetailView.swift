@@ -9,20 +9,20 @@ import SwiftUI
 
 struct StoryDetailView: View {
     @Environment(\.dismiss) private var dismiss
-    
-    let stories: [Story]
-    let initialIndex: Int
-    @State var currentStoryIndex: Int = 0
+    @StateObject private var viewModel: StoryDetailViewModel
     
     init(stories: [Story], initialIndex: Int = 0) {
-        self.stories = stories
-        self.initialIndex = initialIndex
-        _currentStoryIndex = State(initialValue: initialIndex)
+        _viewModel = StateObject(
+            wrappedValue: StoryDetailViewModel(stories: stories, initialIndex: initialIndex)
+        )
     }
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            StoriesView(stories: stories, currentStoryIndex: currentStoryIndex)
+            StoriesView(
+                stories: viewModel.stories,
+                currentStoryIndex: viewModel.currentStoryIndex
+            )
             
             CloseButton {
                 dismiss()
