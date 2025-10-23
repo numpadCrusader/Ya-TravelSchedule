@@ -9,20 +9,15 @@ import SwiftUI
 
 struct StationSelectionView: View {
     @Environment(\.dismiss) private var dismiss
-    @State private var searchQuery = ""
+    @StateObject private var viewModel = StationSelectionViewModel()
     
     let onSelect: (String) -> Void
     
-    let stations = [
-        "Киевский вокзал", "Курский вокзал", "Ярославский вокзал",
-        "Белорусский вокзал", "Савеловский вокзал", "Ленинградский вокзал"
-    ]
-    
     var body: some View {
         VStack {
-            SearchBar(text: $searchQuery, prompt: "Введите запрос")
+            SearchBar(text: $viewModel.searchQuery, prompt: "Введите запрос")
             
-            if searchResults.isEmpty {
+            if viewModel.searchResults.isEmpty {
                 VStack {
                     Spacer()
                     Text("Станция не найдена")
@@ -33,7 +28,7 @@ struct StationSelectionView: View {
                 }
             } else {
                 List {
-                    ForEach(searchResults, id: \.self) { station in
+                    ForEach(viewModel.searchResults, id: \.self) { station in
                         Button {
                             onSelect(station)
                         } label: {
@@ -60,14 +55,6 @@ struct StationSelectionView: View {
                     Image(.icChevronLeft)
                 }
             }
-        }
-    }
-    
-    var searchResults: [String] {
-        if searchQuery.isEmpty {
-            stations
-        } else {
-            stations.filter { $0.localizedCaseInsensitiveContains(searchQuery) }
         }
     }
 }

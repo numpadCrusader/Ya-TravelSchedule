@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+@MainActor
 final class CitySelectionViewModel: ObservableObject {
     @Published var searchQuery: String = ""
     @Published var selectedCity: String?
