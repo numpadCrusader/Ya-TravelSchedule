@@ -9,23 +9,23 @@ import SwiftUI
 
 struct CarriersView: View {
     @Environment(\.dismiss) private var dismiss
+    @StateObject private var viewModel: CarriersViewModel
     
-    @State private var showCarrierFilters = false
-    @State private var selectedCarrier: Carrier?
-    
-    let fromLocation: String
-    let toLocation: String
-    let carriers: [Carrier] = MockData.carriers
+    init(fromLocation: String, toLocation: String) {
+        _viewModel = StateObject(
+            wrappedValue: CarriersViewModel(fromLocation: fromLocation, toLocation: toLocation)
+        )
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(fromLocation) → \(toLocation)")
+            Text("\(viewModel.fromLocation) → \(viewModel.toLocation)")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.ypBlackDynamic)
                 .padding(.horizontal, 16)
                 .multilineTextAlignment(.leading)
             
-            if carriers.isEmpty {
+            if viewModel.carriers.isEmpty {
                 VStack {
                     Spacer()
                     Text("Вариантов нет")
@@ -37,9 +37,9 @@ struct CarriersView: View {
             } else {
                 ScrollView {
                     LazyVStack(spacing: 8) {
-                        ForEach(carriers) { carrier in
+                        ForEach(viewModel.carriers) { carrier in
                             Button {
-                                selectedCarrier = carrier
+                                viewModel.selectCarrier(carrier)
                             } label: {
                                 CarrierCardView(carrier: carrier)
                             }
@@ -56,24 +56,22 @@ struct CarriersView: View {
         .background(.ypWhiteDynamic)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                Button() {
+                Button {
                     dismiss()
                 } label: {
                     Image(.icChevronLeft)
                 }
             }
         }
-        .navigationDestination(isPresented: $showCarrierFilters) {
-            CarrierFiltersView { timeRangeList, showTransfers in
-                
-            }
+        .navigationDestination(isPresented: $viewModel.showCarrierFilters) {
+            CarrierFiltersView { timeRangeList, showTransfers in }
         }
-        .navigationDestination(item: $selectedCarrier) { _ in
+        .navigationDestination(item: $viewModel.selectedCarrier) { _ in
             CarrierInfoView()
         }
         .overlay(alignment: .bottom) {
-            Button() {
-                showCarrierFilters = true
+            Button {
+                viewModel.openFilters()
             } label: {
                 Text("Уточнить время")
                     .foregroundColor(.ypWhiteUniversal)
