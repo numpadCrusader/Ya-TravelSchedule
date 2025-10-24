@@ -27,6 +27,7 @@
 		045B22202E83F35E00DF5EC5 /* CitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B221F2E83F35E00DF5EC5 /* CitySelectionView.swift */; };
 		046C4DAF2EABD4260019D2EB /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C4DAE2EABD4260019D2EB /* City.swift */; };
 		046C4DB52EABD4690019D2EB /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C4DB42EABD4690019D2EB /* Station.swift */; };
+		046C4DBD2EABE3A80019D2EB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C4DBC2EABE3A80019D2EB /* Location.swift */; };
 		047914642E73D03200FEAC8F /* ScheduleBetweenStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914632E73D03200FEAC8F /* ScheduleBetweenStationsService.swift */; };
 		047914672E73D2A500FEAC8F /* StationScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914662E73D2A500FEAC8F /* StationScheduleService.swift */; };
 		0479146A2E73D66100FEAC8F /* RouteStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914692E73D66100FEAC8F /* RouteStationsService.swift */; };
@@ -95,6 +96,7 @@
 		045B221F2E83F35E00DF5EC5 /* CitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionView.swift; sourceTree = "<group>"; };
 		046C4DAE2EABD4260019D2EB /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		046C4DB42EABD4690019D2EB /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		046C4DBC2EABE3A80019D2EB /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		047914632E73D03200FEAC8F /* ScheduleBetweenStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBetweenStationsService.swift; sourceTree = "<group>"; };
 		047914662E73D2A500FEAC8F /* StationScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationScheduleService.swift; sourceTree = "<group>"; };
 		047914692E73D66100FEAC8F /* RouteStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStationsService.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			children = (
 				046C4DAE2EABD4260019D2EB /* City.swift */,
 				046C4DB42EABD4690019D2EB /* Station.swift */,
+				046C4DBC2EABE3A80019D2EB /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */,
 				047914642E73D03200FEAC8F /* ScheduleBetweenStationsService.swift in Sources */,
 				04E308252EA6A6EC000CED60 /* AppStorageKeys.swift in Sources */,
+				046C4DBD2EABE3A80019D2EB /* Location.swift in Sources */,
 				047914702E73DB6700FEAC8F /* AllStationsService.swift in Sources */,
 				041374E42EA637A20019A36C /* Story.swift in Sources */,
 				04A5A5DC2EA39A6000DFE7A1 /* StationSelectionView.swift in Sources */,

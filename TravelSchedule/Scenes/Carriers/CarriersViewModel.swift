@@ -13,13 +13,13 @@ final class CarriersViewModel: ObservableObject {
     @Published var showCarrierFilters = false
     @Published var selectedCarrier: Carrier?
     
-    let fromLocation: String
-    let toLocation: String
+    let fromLocation: Location
+    let toLocation: Location
     let carriers: [Carrier]
     
     init(
-        fromLocation: String,
-        toLocation: String,
+        fromLocation: Location,
+        toLocation: Location,
         carriers: [Carrier] = MockData.carriers
     ) {
         self.fromLocation = fromLocation

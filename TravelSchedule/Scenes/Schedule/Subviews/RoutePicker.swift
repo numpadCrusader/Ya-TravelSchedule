@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RoutePicker: View {
-    @Binding var fromLocation: String?
-    @Binding var toLocation: String?
+    @Binding var fromLocation: Location?
+    @Binding var toLocation: Location?
     
     var onSelectFrom: () -> Void
     var onSelectTo: () -> Void
@@ -18,12 +18,12 @@ struct RoutePicker: View {
         HStack(spacing: 16) {
             VStack(spacing: 0) {
                 RoutePickerButton(
-                    title: fromLocation ?? "Откуда",
+                    title: fromLocation?.description ?? "Откуда",
                     isPlaceholder: fromLocation == nil,
                     action: onSelectFrom)
                 
                 RoutePickerButton(
-                    title: toLocation ?? "Куда",
+                    title: toLocation?.description ?? "Куда",
                     isPlaceholder: toLocation == nil,
                     action: onSelectTo)
             }

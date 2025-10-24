@@ -11,7 +11,7 @@ struct CarriersView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel: CarriersViewModel
     
-    init(fromLocation: String, toLocation: String) {
+    init(fromLocation: Location, toLocation: Location) {
         _viewModel = StateObject(
             wrappedValue: CarriersViewModel(fromLocation: fromLocation, toLocation: toLocation)
         )
@@ -19,7 +19,7 @@ struct CarriersView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(viewModel.fromLocation) → \(viewModel.toLocation)")
+            Text("\(viewModel.fromLocation.description) → \(viewModel.toLocation.description)")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.ypBlackDynamic)
                 .padding(.horizontal, 16)
@@ -85,11 +85,4 @@ struct CarriersView: View {
             }
         }
     }
-}
-
-#Preview {
-    CarriersView(
-        fromLocation: "Москва (Ярославский вокзал)",
-        toLocation: "Санкт Петербург (Балтийский вокзал)"
-    )
 }

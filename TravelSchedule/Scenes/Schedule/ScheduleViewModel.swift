@@ -10,8 +10,8 @@ import Combine
 
 @MainActor
 final class ScheduleViewModel: ObservableObject {
-    @Published var fromLocation: String?
-    @Published var toLocation: String?
+    @Published var fromLocation: Location?
+    @Published var toLocation: Location?
     @Published var selectedPickerType: PickerType?
     @Published var showCitySelection = false
     @Published var showCarriers = false
@@ -29,12 +29,11 @@ final class ScheduleViewModel: ObservableObject {
         showCitySelection = true
     }
     
-    func handleCitySelection(city: String, station: String) {
-        let location = "\(city) (\(station))"
+    func handleCitySelection(city: City, station: Station) {
         if selectedPickerType == .fromLocation {
-            fromLocation = location
+            fromLocation = .init(city: city, station: station)
         } else {
-            toLocation = location
+            toLocation = .init(city: city, station: station)
         }
         showCitySelection = false
     }

@@ -46,7 +46,7 @@ struct ScheduleView: View {
         .fullScreenCover(isPresented: $viewModel.showCitySelection) {
             NavigationStack {
                 CitySelectionView { city, station in
-                    viewModel.handleCitySelection(city: city.title, station: station.title)
+                    viewModel.handleCitySelection(city: city, station: station)
                 }
             }
         }
