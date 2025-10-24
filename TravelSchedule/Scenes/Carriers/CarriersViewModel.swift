@@ -18,10 +18,7 @@ final class CarriersViewModel: ObservableObject {
     let fromLocation: Location
     let toLocation: Location
     
-    private lazy var isoFormatter: ISO8601DateFormatter = {
-        let formatter = ISO8601DateFormatter()
-        return formatter
-    }()
+    private lazy var isoFormatter = ISO8601DateFormatter()
     
     private lazy var timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -56,41 +53,50 @@ final class CarriersViewModel: ObservableObject {
     func loadCarriers() {
         Task {
             do {
-                let networkClient = NetworkClient.shared
-                
-                let response = try await networkClient.getScheduleBetweenStations(
+                let response = try await NetworkClient.shared.getScheduleBetweenStations(
                     from: fromLocation.station.code,
                     to: toLocation.station.code
                 )
                 
-                let segments = response.segments ?? []
-                let carrier = segments.map {
-                    let departureDate = isoFormatter.date(from: $0.departure ?? "")
-                    let arrivalDate = isoFormatter.date(from: $0.arrival ?? "")
+                carriers = (response.segments ?? []).compactMap { segment in
+                    guard
+                        let depStr = segment.departure,
+                        let arrStr = segment.arrival,
+                        let departure = isoFormatter.date(from: depStr),
+                        let arrival = isoFormatter.date(from: arrStr),
+                        let duration = segment.duration
+                    else {
+                        return nil
+                    }
                     
                     return Carrier(
-                        title: $0.thread?.carrier?.title ?? "",
-                        date: dayMonthFormatter.string(from: departureDate ?? Date()),
-                        fromTime: timeFormatter.string(from: departureDate ?? Date()),
-                        toTime: timeFormatter.string(from: arrivalDate ?? Date())
+                        title: segment.thread?.carrier?.title ?? "",
+                        date: dayMonthFormatter.string(from: departure),
+                        fromTime: timeFormatter.string(from: departure),
+                        toTime: timeFormatter.string(from: arrival),
+                        duration: hoursCeiled(from: duration)
                     )
                 }
-                
-                self.carriers = carrier
             } catch {
-                if let urlError = error as? URLError {
-                    switch urlError.code {
-                        case .notConnectedToInternet, .networkConnectionLost:
-                            errorType = .noInternet
-                        default:
-                            errorType = .serverError
-                    }
-                } else {
-                    errorType = .serverError
-                }
-                
-                print("CarriersViewModel Error. \(error)")
+                handle(error)
             }
         }
+    }
+    
+    private func handle(_ error: Error) {
+        if let urlError = error as? URLError {
+            switch urlError.code {
+                case .notConnectedToInternet, .networkConnectionLost:
+                    errorType = .noInternet
+                default:
+                    errorType = .serverError
+            }
+        } else {
+            errorType = .serverError
+        }
+    }
+    
+    func hoursCeiled(from seconds: Int) -> Int {
+        Int(floor(Double(seconds) / 3600.0))
     }
 }

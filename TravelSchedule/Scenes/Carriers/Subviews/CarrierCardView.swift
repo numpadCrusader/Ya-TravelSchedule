@@ -34,7 +34,7 @@ struct CarrierCardView: View {
                         .fill(.ypGrayUniversal)
                         .frame(height: 1)
                     
-                    Text("20 часов")
+                    Text(hoursWord(for: carrier.duration))
                         .font(.system(size: 12, weight: .regular))
                         .padding(.horizontal, 5)
                         .background(.ypLightGrayUniversal)
@@ -57,13 +57,21 @@ struct CarrierCardView: View {
                 .padding(.trailing, 23)
         }
     }
-}
-
-#Preview {
-    CarrierCardView(carrier: Carrier(
-        title: "РЖД",
-        date: "14 января",
-        fromTime: "22:30",
-        toTime: "8:30"
-    ))
+    
+    func hoursWord(for number: Int) -> String {
+        let n = abs(number) % 100
+        let lastDigit = n % 10
+        
+        let hoursWord = if n >= 11 && n <= 19 {
+            "часов"
+        } else if lastDigit == 1 {
+            "час"
+        } else if (2...4).contains(lastDigit) {
+            "часа"
+        } else {
+            "часов"
+        }
+        
+        return "\(number) \(hoursWord)"
+    }
 }

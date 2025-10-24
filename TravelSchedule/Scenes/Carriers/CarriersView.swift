@@ -25,15 +25,17 @@ struct CarriersView: View {
                 .padding(.horizontal, 16)
                 .multilineTextAlignment(.leading)
             
-            if viewModel.carriers.isEmpty {
-                VStack {
-                    Spacer()
-                    Text("Вариантов нет")
-                        .font(.system(size: 24, weight: .bold))
-                        .foregroundStyle(.ypBlackDynamic)
-                        .multilineTextAlignment(.center)
-                    Spacer()
-                }
+            if let errorType = viewModel.errorType {
+                Spacer()
+                ErrorView(errorType: errorType)
+                Spacer()
+            } else if viewModel.carriers.isEmpty {
+                Spacer()
+                Text("Вариантов нет")
+                    .font(.system(size: 24, weight: .bold))
+                    .foregroundStyle(.ypBlackDynamic)
+                    .multilineTextAlignment(.center)
+                Spacer()
             } else {
                 ScrollView {
                     LazyVStack(spacing: 8) {
