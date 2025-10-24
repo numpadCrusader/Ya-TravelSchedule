@@ -13,5 +13,4 @@ struct Carrier: Identifiable, Hashable {
     let date: String
     let fromTime: String
     let toTime: String
-    let hasTransfer: Bool
 }

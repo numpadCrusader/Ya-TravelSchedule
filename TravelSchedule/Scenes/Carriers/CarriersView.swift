@@ -18,7 +18,7 @@ struct CarriersView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             Text("\(viewModel.fromLocation.description) → \(viewModel.toLocation.description)")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.ypBlackDynamic)
@@ -83,6 +83,9 @@ struct CarriersView: View {
                     .padding(.horizontal, 16)
                     .padding(.bottom, 24)
             }
+        }
+        .task {
+            viewModel.loadCarriers()
         }
     }
 }

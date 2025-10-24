@@ -37,7 +37,6 @@
 		047914722E73DC0300FEAC8F /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914712E73DC0300FEAC8F /* CopyrightService.swift */; };
 		048CA2942E65877600C200C2 /* NearestStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CA2932E65877600C200C2 /* NearestStationsService.swift */; };
 		048D02692E36AC4300ECB49C /* TravelScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D02682E36AC4300ECB49C /* TravelScheduleApp.swift */; };
-		048D026B2E36AC4300ECB49C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D026A2E36AC4300ECB49C /* ContentView.swift */; };
 		048D026D2E36AC4500ECB49C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D026C2E36AC4500ECB49C /* Assets.xcassets */; };
 		048D02702E36AC4500ECB49C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D026F2E36AC4500ECB49C /* Preview Assets.xcassets */; };
 		04A5A5DC2EA39A6000DFE7A1 /* StationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A5DB2EA39A6000DFE7A1 /* StationSelectionView.swift */; };
@@ -107,7 +106,6 @@
 		048CA2932E65877600C200C2 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
 		048D02652E36AC4300ECB49C /* TravelSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048D02682E36AC4300ECB49C /* TravelScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelScheduleApp.swift; sourceTree = "<group>"; };
-		048D026A2E36AC4300ECB49C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		048D026C2E36AC4500ECB49C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D026F2E36AC4500ECB49C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04A5A5DB2EA39A6000DFE7A1 /* StationSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSelectionView.swift; sourceTree = "<group>"; };
@@ -335,7 +333,6 @@
 				048CA2922E65876000C200C2 /* Network */,
 				04F5EC1A2E65859D00669B37 /* OpenAPI */,
 				04445CC02EAA06770008A811 /* Resources */,
-				048D026A2E36AC4300ECB49C /* ContentView.swift */,
 				048D026E2E36AC4500ECB49C /* Preview Content */,
 			);
 			path = TravelSchedule;
@@ -597,7 +594,6 @@
 				041374E42EA637A20019A36C /* Story.swift in Sources */,
 				04A5A5DC2EA39A6000DFE7A1 /* StationSelectionView.swift in Sources */,
 				04445CC62EAA074A0008A811 /* CarrierFiltersViewModel.swift in Sources */,
-				048D026B2E36AC4300ECB49C /* ContentView.swift in Sources */,
 				04E308862EA6B549000CED60 /* TimerConfiguration.swift in Sources */,
 				04E3087D2EA6B519000CED60 /* ProgressBar.swift in Sources */,
 				0479146A2E73D66100FEAC8F /* RouteStationsService.swift in Sources */,

@@ -23,12 +23,6 @@ struct CarrierCardView: View {
                     Text(carrier.title)
                         .font(.system(size: 17, weight: .regular))
                         .foregroundColor(.ypBlackUniversal)
-                    
-                    if carrier.hasTransfer {
-                        Text("С пересадкой в Костроме")
-                            .font(.system(size: 12, weight: .regular))
-                            .foregroundColor(.ypRedUniversal)
-                    }
                 }
             }
             
@@ -70,7 +64,6 @@ struct CarrierCardView: View {
         title: "РЖД",
         date: "14 января",
         fromTime: "22:30",
-        toTime: "8:30",
-        hasTransfer: true
+        toTime: "8:30"
     ))
 }

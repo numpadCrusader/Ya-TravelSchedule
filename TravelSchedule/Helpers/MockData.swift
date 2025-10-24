@@ -12,104 +12,59 @@ enum MockData {
         City(
             title: "Актау",
             stations: [
-                .init(title: "Вокзал Мангистау", code: "S9619344")
+                .init(title: "Вокзал Мангистау", code: "s9619344")
             ]
         ),
         City(
             title: "Алматы",
             stations: [
-                .init(title: "Вокзал Алматы-1", code: "S9618978"),
-                .init(title: "Вокзал Алматы-2", code: "S9618977")
+                .init(title: "Вокзал Алматы-1", code: "s9618978"),
+                .init(title: "Вокзал Алматы-2", code: "s9618977")
             ]
         ),
         City(
             title: "Астана",
             stations: [
-                .init(title: "Вокзал Нурлы Жол", code: "S9863459"),
-                .init(title: "Вокзал Нур-Султан", code: "S9619762")
+                .init(title: "Вокзал Нурлы Жол", code: "s9863459"),
+                .init(title: "Вокзал Нур-Султан", code: "s9619762")
             ]
         ),
         City(
             title: "Атырау",
             stations: [
-                .init(title: "Вокзал Атырау", code: "S9619367")
+                .init(title: "Вокзал Атырау", code: "s9619367")
             ]
         ),
         City(
             title: "Караганды",
             stations: [
-                .init(title: "Вокзал Караганды-Пасс", code: "S9619954")
+                .init(title: "Вокзал Караганды-Пасс", code: "s9619954")
             ]
         ),
         City(
             title: "Павлодар",
             stations: [
-                .init(title: "Вокзал Павлодар", code: "S9619906")
+                .init(title: "Вокзал Павлодар", code: "s9619906")
             ]
         ),
         City(
             title: "Тараз",
             stations: [
-                .init(title: "Вокзал Тараз", code: "9619123")
+                .init(title: "Вокзал Тараз", code: "s9619123")
             ]
         ),
         City(
             title: "Усть-Каменогорск",
             stations: [
-                .init(title: "Вокзал Оскемен-1", code: "S9619142"),
-                .init(title: "Вокзал Усть-Каменогорск", code: "S9619282")
+                .init(title: "Вокзал Оскемен-1", code: "s9619142"),
+                .init(title: "Вокзал Усть-Каменогорск", code: "s9619282")
             ]
         ),
         City(
             title: "Шымкент",
             stations: [
-                .init(title: "Вокзал Шымкент", code: "S9619176")
+                .init(title: "Вокзал Шымкент", code: "s9619176")
             ]
-        )
-    ]
-    
-    static let carriers: [Carrier] = [
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: false
-        ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: true
-        ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: false
-        ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: true
-        ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: true
-        ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: false
         )
     ]
     
