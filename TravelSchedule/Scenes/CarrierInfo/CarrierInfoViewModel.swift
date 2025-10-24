@@ -14,11 +14,10 @@ final class CarrierInfoViewModel: ObservableObject {
     @Published var contacts: [Contact]
     
     init(
-        carrierName: String = "ОАО «РЖД»",
-        contacts: [Contact] = MockData.contacts
+        carrierName: String,
+        contacts: [Contact]
     ) {
         self.carrierName = carrierName
         self.contacts = contacts
     }
 }
-

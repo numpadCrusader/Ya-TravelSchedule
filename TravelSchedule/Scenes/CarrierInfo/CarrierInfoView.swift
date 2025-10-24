@@ -9,7 +9,22 @@ import SwiftUI
 
 struct CarrierInfoView: View {
     @Environment(\.dismiss) private var dismiss
-    @StateObject private var viewModel = CarrierInfoViewModel()
+    @StateObject private var viewModel: CarrierInfoViewModel
+    
+    let carrier: Carrier
+    
+    init(carrier: Carrier) {
+        self.carrier = carrier
+        _viewModel = StateObject(
+            wrappedValue: CarrierInfoViewModel(
+                carrierName: carrier.title,
+                contacts: [
+                    .init(title: "E-mail", description: "Test"),
+                    .init(title: "Телефон", description: "Test")
+                ]
+            )
+        )
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -46,8 +61,4 @@ struct CarrierInfoView: View {
             }
         }
     }
-}
-
-#Preview {
-    CarrierInfoView()
 }

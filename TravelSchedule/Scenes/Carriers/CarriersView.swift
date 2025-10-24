@@ -66,8 +66,8 @@ struct CarriersView: View {
         .navigationDestination(isPresented: $viewModel.showCarrierFilters) {
             CarrierFiltersView { timeRangeList, showTransfers in }
         }
-        .navigationDestination(item: $viewModel.selectedCarrier) { _ in
-            CarrierInfoView()
+        .navigationDestination(item: $viewModel.selectedCarrier) { carrier in
+            CarrierInfoView(carrier: carrier)
         }
         .overlay(alignment: .bottom) {
             Button {
