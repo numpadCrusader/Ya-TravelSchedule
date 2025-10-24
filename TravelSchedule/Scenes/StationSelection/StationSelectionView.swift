@@ -9,9 +9,14 @@ import SwiftUI
 
 struct StationSelectionView: View {
     @Environment(\.dismiss) private var dismiss
-    @StateObject private var viewModel = StationSelectionViewModel()
+    @StateObject private var viewModel: StationSelectionViewModel
     
-    let onSelect: (String) -> Void
+    let onSelect: (Station) -> Void
+    
+    init(stations: [Station], onSelect: @escaping (Station) -> Void) {
+        _viewModel = StateObject(wrappedValue: StationSelectionViewModel(stations: stations))
+        self.onSelect = onSelect
+    }
     
     var body: some View {
         VStack {
@@ -28,11 +33,11 @@ struct StationSelectionView: View {
                 }
             } else {
                 List {
-                    ForEach(viewModel.searchResults, id: \.self) { station in
+                    ForEach(viewModel.searchResults) { station in
                         Button {
                             onSelect(station)
                         } label: {
-                            TextChevronRow(text: station)
+                            TextChevronRow(text: station.title)
                         }
                         .listRowSeparator(.hidden)
                         .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
@@ -60,5 +65,5 @@ struct StationSelectionView: View {
 }
 
 #Preview {
-    StationSelectionView { _ in }
+    StationSelectionView(stations: []) { _ in }
 }

@@ -11,7 +11,7 @@ struct CitySelectionView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel = CitySelectionViewModel()
     
-    let onComplete: (String, String) -> Void
+    let onComplete: (City, Station) -> Void
     
     var body: some View {
         VStack {
@@ -28,11 +28,11 @@ struct CitySelectionView: View {
                 }
             } else {
                 List {
-                    ForEach(viewModel.searchResults, id: \.self) { city in
+                    ForEach(viewModel.searchResults) { city in
                         Button {
                             viewModel.select(city: city)
                         } label: {
-                            TextChevronRow(text: city)
+                            TextChevronRow(text: city.title)
                         }
                         .listRowSeparator(.hidden)
                         .listRowInsets(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
@@ -56,7 +56,7 @@ struct CitySelectionView: View {
             }
         }
         .navigationDestination(item: $viewModel.selectedCity) { city in
-            StationSelectionView { station in
+            StationSelectionView(stations: city.stations) { station in
                 onComplete(city, station)
             }
         }

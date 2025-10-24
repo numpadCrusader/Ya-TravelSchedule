@@ -11,18 +11,17 @@ import Combine
 @MainActor
 final class StationSelectionViewModel: ObservableObject {
     @Published var searchQuery: String = ""
+    private let stations: [Station]
     
-    let stations = [
-        "Киевский вокзал", "Курский вокзал", "Ярославский вокзал",
-        "Белорусский вокзал", "Савеловский вокзал", "Ленинградский вокзал"
-    ]
+    init(stations: [Station]) {
+        self.stations = stations
+    }
     
-    var searchResults: [String] {
+    var searchResults: [Station] {
         if searchQuery.isEmpty {
             stations
         } else {
-            stations.filter { $0.localizedCaseInsensitiveContains(searchQuery) }
+            stations.filter { $0.title.localizedCaseInsensitiveContains(searchQuery) }
         }
     }
 }
-

@@ -25,6 +25,8 @@
 		045B21C82E83B3E000DF5EC5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21C72E83B3E000DF5EC5 /* MainView.swift */; };
 		045B21E72E83C55300DF5EC5 /* RoutePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B21E62E83C55300DF5EC5 /* RoutePicker.swift */; };
 		045B22202E83F35E00DF5EC5 /* CitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B221F2E83F35E00DF5EC5 /* CitySelectionView.swift */; };
+		046C4DAF2EABD4260019D2EB /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C4DAE2EABD4260019D2EB /* City.swift */; };
+		046C4DB52EABD4690019D2EB /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C4DB42EABD4690019D2EB /* Station.swift */; };
 		047914642E73D03200FEAC8F /* ScheduleBetweenStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914632E73D03200FEAC8F /* ScheduleBetweenStationsService.swift */; };
 		047914672E73D2A500FEAC8F /* StationScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914662E73D2A500FEAC8F /* StationScheduleService.swift */; };
 		0479146A2E73D66100FEAC8F /* RouteStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047914692E73D66100FEAC8F /* RouteStationsService.swift */; };
@@ -91,6 +93,8 @@
 		045B21C72E83B3E000DF5EC5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		045B21E62E83C55300DF5EC5 /* RoutePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePicker.swift; sourceTree = "<group>"; };
 		045B221F2E83F35E00DF5EC5 /* CitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionView.swift; sourceTree = "<group>"; };
+		046C4DAE2EABD4260019D2EB /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		046C4DB42EABD4690019D2EB /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		047914632E73D03200FEAC8F /* ScheduleBetweenStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBetweenStationsService.swift; sourceTree = "<group>"; };
 		047914662E73D2A500FEAC8F /* StationScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationScheduleService.swift; sourceTree = "<group>"; };
 		047914692E73D66100FEAC8F /* RouteStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStationsService.swift; sourceTree = "<group>"; };
@@ -284,6 +288,15 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		046C4DB12EABD44F0019D2EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				046C4DAE2EABD4260019D2EB /* City.swift */,
+				046C4DB42EABD4690019D2EB /* Station.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		048CA2922E65876000C200C2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +328,7 @@
 				04445CB92EAA06280008A811 /* App */,
 				04D1813E2EA8E9FF0088055F /* Scenes */,
 				04E307A82EA691AE000CED60 /* Helpers */,
+				046C4DB12EABD44F0019D2EB /* Models */,
 				048CA2922E65876000C200C2 /* Network */,
 				04F5EC1A2E65859D00669B37 /* OpenAPI */,
 				04445CC02EAA06770008A811 /* Resources */,
@@ -571,6 +585,7 @@
 				04E3083C2EA6A9CB000CED60 /* CopyrightView.swift in Sources */,
 				04A5A7252EA4F96700DFE7A1 /* ErrorType.swift in Sources */,
 				04A5A69D2EA4102A00DFE7A1 /* CarrierFiltersView.swift in Sources */,
+				046C4DB52EABD4690019D2EB /* Station.swift in Sources */,
 				0452B6CD2EA2AA640031C9B8 /* TextChevronRow.swift in Sources */,
 				047914642E73D03200FEAC8F /* ScheduleBetweenStationsService.swift in Sources */,
 				04E308252EA6A6EC000CED60 /* AppStorageKeys.swift in Sources */,
@@ -582,6 +597,7 @@
 				04E308862EA6B549000CED60 /* TimerConfiguration.swift in Sources */,
 				04E3087D2EA6B519000CED60 /* ProgressBar.swift in Sources */,
 				0479146A2E73D66100FEAC8F /* RouteStationsService.swift in Sources */,
+				046C4DAF2EABD4260019D2EB /* City.swift in Sources */,
 				04E3086E2EA6B4DE000CED60 /* StoriesProgressBar.swift in Sources */,
 				04B2B2FA2EA1569B000A53B3 /* SearchBar.swift in Sources */,
 				045B21E72E83C55300DF5EC5 /* RoutePicker.swift in Sources */,
@@ -694,6 +710,8 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -749,6 +767,8 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

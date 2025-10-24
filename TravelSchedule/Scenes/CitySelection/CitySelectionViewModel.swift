@@ -11,22 +11,19 @@ import Combine
 @MainActor
 final class CitySelectionViewModel: ObservableObject {
     @Published var searchQuery: String = ""
-    @Published var selectedCity: String?
+    @Published var selectedCity: City?
     
-    let cities = [
-        "Москва", "Санкт Петербург", "Сочи", "Горный воздух",
-        "Краснодар", "Казань", "Омск"
-    ]
+    var cities = MockData.cities
     
-    var searchResults: [String] {
+    var searchResults: [City] {
         if searchQuery.isEmpty {
             cities
         } else {
-            cities.filter { $0.localizedCaseInsensitiveContains(searchQuery) }
+            cities.filter { $0.title.localizedCaseInsensitiveContains(searchQuery) }
         }
     }
     
-    func select(city: String) {
+    func select(city: City) {
         selectedCity = city
     }
 }
