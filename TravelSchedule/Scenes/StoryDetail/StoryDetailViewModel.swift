@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 
+@MainActor
 final class StoryDetailViewModel: ObservableObject {
     @Published var currentStoryIndex: Int
     let stories: [Story]
