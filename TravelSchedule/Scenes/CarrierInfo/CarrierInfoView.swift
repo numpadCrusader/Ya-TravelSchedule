@@ -17,31 +17,14 @@ struct CarrierInfoView: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
                 Spacer()
-                AsyncImage(url: URL(string: viewModel.carrierLogoUrl ?? "")) { phase in
-                    switch phase {
-                        case .empty:
-                            ProgressView()
-                                .frame(height: 104)
-                            
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 104)
-                            
-                        case .failure:
-                            Image(systemName: "exclamationmark.triangle.fill")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 104)
-                            
-                        @unknown default:
-                            Image(systemName: "exclamationmark.triangle.fill")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 104)
-                    }
+                AsyncImage(url: URL(string: viewModel.carrierLogoUrl ?? "")) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                } placeholder: {
+                    EmptyView()
                 }
+                .frame(height: 104)
                 Spacer()
             }
             
