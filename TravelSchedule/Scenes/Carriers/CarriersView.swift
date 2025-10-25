@@ -69,7 +69,7 @@ struct CarriersView: View {
             CarrierFiltersView { timeRangeList, showTransfers in }
         }
         .navigationDestination(item: $viewModel.selectedCarrier) { carrier in
-            CarrierInfoView(carrier: carrier)
+            CarrierInfoView(carrierCode: carrier.code)
         }
         .overlay(alignment: .bottom) {
             if viewModel.errorType == nil {
@@ -89,7 +89,9 @@ struct CarriersView: View {
             }
         }
         .task {
-            viewModel.loadCarriers()
+            if viewModel.carriers.isEmpty {
+                viewModel.loadCarriers()
+            }
         }
     }
 }

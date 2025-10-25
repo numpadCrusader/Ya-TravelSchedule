@@ -101,8 +101,4 @@ final class CarriersViewModel: ObservableObject {
             errorType = .serverError
         }
     }
-    
-    func hoursCeiled(from seconds: Int) -> Int {
-        Int(floor(Double(seconds) / 3600.0))
-    }
 }

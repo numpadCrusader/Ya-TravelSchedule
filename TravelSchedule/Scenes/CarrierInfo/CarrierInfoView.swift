@@ -9,31 +9,43 @@ import SwiftUI
 
 struct CarrierInfoView: View {
     @Environment(\.dismiss) private var dismiss
-    @StateObject private var viewModel: CarrierInfoViewModel
+    @StateObject private var viewModel = CarrierInfoViewModel()
     
-    let carrier: Carrier
-    
-    init(carrier: Carrier) {
-        self.carrier = carrier
-        _viewModel = StateObject(
-            wrappedValue: CarrierInfoViewModel(
-                carrierName: carrier.title,
-                contacts: [
-                    .init(title: "E-mail", description: "Test"),
-                    .init(title: "Телефон", description: "Test")
-                ]
-            )
-        )
-    }
+    let carrierCode: Int
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Image(.imBrandHorizontal1)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 104)
+            HStack {
+                Spacer()
+                AsyncImage(url: URL(string: viewModel.carrierLogoUrl ?? "")) { phase in
+                    switch phase {
+                        case .empty:
+                            ProgressView()
+                                .frame(height: 104)
+                            
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 104)
+                            
+                        case .failure:
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 104)
+                            
+                        @unknown default:
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 104)
+                    }
+                }
+                Spacer()
+            }
             
-            Text(viewModel.carrierName)
+            Text(viewModel.carrierName ?? "")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.ypBlackDynamic)
             
@@ -59,6 +71,9 @@ struct CarrierInfoView: View {
                     Image(.icChevronLeft)
                 }
             }
+        }
+        .task {
+            viewModel.loadCarrierInfo(by: carrierCode)
         }
     }
 }
