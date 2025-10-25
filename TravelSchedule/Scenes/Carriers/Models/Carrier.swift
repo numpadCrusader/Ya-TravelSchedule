@@ -16,4 +16,5 @@ struct Carrier: Identifiable, Hashable {
     let departureTime: String
     let arrivalTime: String
     let routeDuration: Int
+    let hasTransfer: Bool
 }

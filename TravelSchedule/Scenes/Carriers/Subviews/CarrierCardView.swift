@@ -45,6 +45,12 @@ struct CarrierCardView: View {
                     Text(carrier.title)
                         .font(.system(size: 17, weight: .regular))
                         .foregroundColor(.ypBlackUniversal)
+                    
+                    if carrier.hasTransfer {
+                        Text("С пересадкой")
+                            .font(.system(size: 12, weight: .regular))
+                            .foregroundColor(.ypRedUniversal)
+                    }
                 }
             }
             

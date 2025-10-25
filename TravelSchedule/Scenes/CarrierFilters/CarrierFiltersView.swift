@@ -9,9 +9,23 @@ import SwiftUI
 
 struct CarrierFiltersView: View {
     @Environment(\.dismiss) private var dismiss
-    @StateObject private var viewModel = CarrierFiltersViewModel()
+    @StateObject private var viewModel: CarrierFiltersViewModel
     
     let onFinish: (Set<TimeRange>, Bool) -> Void
+    
+    init(
+        initialSelectedTimes: Set<TimeRange>,
+        initialShowTransfers: Bool?,
+        onFinish: @escaping (Set<TimeRange>, Bool) -> Void
+    ) {
+        _viewModel = StateObject(
+            wrappedValue: CarrierFiltersViewModel(
+                selectedTimes: initialSelectedTimes,
+                showTransfers: initialShowTransfers
+            )
+        )
+        self.onFinish = onFinish
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -72,6 +86,7 @@ struct CarrierFiltersView: View {
             if viewModel.canApply, let showTransfers = viewModel.showTransfers {
                 Button {
                     onFinish(viewModel.selectedTimes, showTransfers)
+                    dismiss()
                 } label: {
                     Text("Применить")
                         .foregroundColor(.ypWhiteUniversal)
@@ -86,8 +101,4 @@ struct CarrierFiltersView: View {
             }
         }
     }
-}
-
-#Preview {
-    CarrierFiltersView { _, _ in }
 }

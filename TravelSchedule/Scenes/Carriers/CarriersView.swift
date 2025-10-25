@@ -66,7 +66,14 @@ struct CarriersView: View {
             }
         }
         .navigationDestination(isPresented: $viewModel.showCarrierFilters) {
-            CarrierFiltersView { timeRangeList, showTransfers in }
+            CarrierFiltersView(
+                initialSelectedTimes: viewModel.selectedTimeRanges,
+                initialShowTransfers: viewModel.showTransfers
+            ) { timeRangeList, showTransfers in
+                viewModel.selectedTimeRanges = timeRangeList
+                viewModel.showTransfers = showTransfers
+                viewModel.applyFilters()
+            }
         }
         .navigationDestination(item: $viewModel.selectedCarrier) { carrier in
             CarrierInfoView(carrierCode: carrier.code)

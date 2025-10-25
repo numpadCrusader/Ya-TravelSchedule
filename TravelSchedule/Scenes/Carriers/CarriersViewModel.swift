@@ -15,6 +15,9 @@ final class CarriersViewModel: ObservableObject {
     @Published var carriers: [Carrier] = []
     @Published var errorType: ErrorType?
     
+    @Published var selectedTimeRanges: Set<TimeRange> = []
+    @Published var showTransfers: Bool?
+    
     let fromLocation: Location
     let toLocation: Location
     
@@ -50,6 +53,10 @@ final class CarriersViewModel: ObservableObject {
         showCarrierFilters = true
     }
     
+    func applyFilters() {
+
+    }
+    
     func loadCarriers() {
         Task {
             do {
@@ -80,7 +87,8 @@ final class CarriersViewModel: ObservableObject {
                         departureDay: dayMonthFormatter.string(from: departureDate),
                         departureTime: timeFormatter.string(from: departureDate),
                         arrivalTime: timeFormatter.string(from: arrivalDate),
-                        routeDuration: duration
+                        routeDuration: duration,
+                        hasTransfer: false
                     )
                 }
             } catch {

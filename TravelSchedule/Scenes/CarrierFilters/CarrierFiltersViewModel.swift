@@ -17,6 +17,11 @@ final class CarrierFiltersViewModel: ObservableObject {
         !selectedTimes.isEmpty && showTransfers != nil
     }
     
+    init(selectedTimes: Set<TimeRange>, showTransfers: Bool?) {
+        self.selectedTimes = selectedTimes
+        self.showTransfers = showTransfers
+    }
+    
     func toggleTimeRange(_ range: TimeRange) {
         if selectedTimes.contains(range) {
             selectedTimes.remove(range)
