@@ -8,48 +8,63 @@
 import Foundation
 
 enum MockData {
-    static let carriers: [Carrier] = [
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: false
+    static let cities: [City] = [
+        City(
+            title: "Актау",
+            stations: [
+                .init(title: "Вокзал Мангистау", code: "s9619344")
+            ]
         ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: true
+        City(
+            title: "Алматы",
+            stations: [
+                .init(title: "Вокзал Алматы-1", code: "s9618978"),
+                .init(title: "Вокзал Алматы-2", code: "s9618977")
+            ]
         ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: false
+        City(
+            title: "Астана",
+            stations: [
+                .init(title: "Вокзал Нурлы Жол", code: "s9863459"),
+                .init(title: "Вокзал Нур-Султан", code: "s9619762")
+            ]
         ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: true
+        City(
+            title: "Атырау",
+            stations: [
+                .init(title: "Вокзал Атырау", code: "s9619367")
+            ]
         ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: true
+        City(
+            title: "Караганды",
+            stations: [
+                .init(title: "Вокзал Караганды-Пасс", code: "s9619954")
+            ]
         ),
-        Carrier(
-            title: "РЖД",
-            date: "14 января",
-            fromTime: "22:30",
-            toTime: "8:30",
-            hasTransfer: false
+        City(
+            title: "Павлодар",
+            stations: [
+                .init(title: "Вокзал Павлодар", code: "s9619906")
+            ]
+        ),
+        City(
+            title: "Тараз",
+            stations: [
+                .init(title: "Вокзал Тараз", code: "s9619123")
+            ]
+        ),
+        City(
+            title: "Усть-Каменогорск",
+            stations: [
+                .init(title: "Вокзал Оскемен-1", code: "s9619142"),
+                .init(title: "Вокзал Усть-Каменогорск", code: "s9619282")
+            ]
+        ),
+        City(
+            title: "Шымкент",
+            stations: [
+                .init(title: "Вокзал Шымкент", code: "s9619176")
+            ]
         )
     ]
     
@@ -89,11 +104,6 @@ enum MockData {
             imageResource: .imStoryBackground1,
             isWatched: false
         )
-    ]
-    
-    static let contacts: [Contact] = [
-        Contact(title: "E-mail", description: "i.lozgkina@yandex.ru"),
-        Contact(title: "Телефон", description: "+7 (904) 329-27-71")
     ]
     
     static let practicumText =
