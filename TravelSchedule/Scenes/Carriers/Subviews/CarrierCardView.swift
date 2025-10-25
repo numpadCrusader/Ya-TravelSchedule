@@ -13,11 +13,33 @@ struct CarrierCardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
             HStack(spacing: 8) {
-                Image(.icBrand1)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 38, height: 38)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                AsyncImage(url: URL(string: carrier.logoUrl)) { phase in
+                    switch phase {
+                        case .empty:
+                            ProgressView()
+                            
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 38, height: 38)
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                            
+                        case .failure:
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 38, height: 38)
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                            
+                        @unknown default:
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 38, height: 38)
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                }
                 
                 VStack(alignment: .leading, spacing: 2) {
                     Text(carrier.title)
@@ -27,20 +49,20 @@ struct CarrierCardView: View {
             }
             
             HStack(alignment: .center) {
-                Text(carrier.fromTime)
+                Text(carrier.departureTime)
                 
                 ZStack {
                     Rectangle()
                         .fill(.ypGrayUniversal)
                         .frame(height: 1)
                     
-                    Text(hoursWord(for: carrier.duration))
+                    Text(hoursWord(for: carrier.routeDuration))
                         .font(.system(size: 12, weight: .regular))
                         .padding(.horizontal, 5)
                         .background(.ypLightGrayUniversal)
                 }
                 
-                Text(carrier.toTime)
+                Text(carrier.arrivalTime)
             }
             .font(.system(size: 17, weight: .regular))
             .foregroundStyle(.ypBlackUniversal)
@@ -50,7 +72,7 @@ struct CarrierCardView: View {
         .clipShape(RoundedRectangle(cornerRadius: 24))
         .padding(.horizontal, 16)
         .overlay(alignment: .topTrailing) {
-            Text(carrier.date)
+            Text(carrier.departureDay)
                 .font(.system(size: 12, weight: .regular))
                 .foregroundStyle(.ypBlackUniversal)
                 .padding(.top, 15)
@@ -58,7 +80,7 @@ struct CarrierCardView: View {
         }
     }
     
-    func hoursWord(for number: Int) -> String {
+    private func hoursWord(for number: Int) -> String {
         let n = abs(number) % 100
         let lastDigit = n % 10
         
@@ -72,6 +94,6 @@ struct CarrierCardView: View {
             "часов"
         }
         
-        return "\(number) \(hoursWord)"
+        return "\(number/3600) \(hoursWord)"
     }
 }

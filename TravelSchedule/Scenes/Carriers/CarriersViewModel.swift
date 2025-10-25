@@ -58,23 +58,29 @@ final class CarriersViewModel: ObservableObject {
                     to: toLocation.station.code
                 )
                 
-                carriers = (response.segments ?? []).compactMap { segment in
+                let segments = response.segments ?? []
+                carriers = segments.compactMap {
                     guard
-                        let depStr = segment.departure,
-                        let arrStr = segment.arrival,
-                        let departure = isoFormatter.date(from: depStr),
-                        let arrival = isoFormatter.date(from: arrStr),
-                        let duration = segment.duration
+                        let title = $0.thread?.carrier?.title,
+                        let code = $0.thread?.carrier?.code,
+                        let logoUrl = $0.thread?.carrier?.logo,
+                        let departureString = $0.departure,
+                        let arrivalString = $0.arrival,
+                        let departureDate = isoFormatter.date(from: departureString),
+                        let arrivalDate = isoFormatter.date(from: arrivalString),
+                        let duration = $0.duration
                     else {
                         return nil
                     }
                     
                     return Carrier(
-                        title: segment.thread?.carrier?.title ?? "",
-                        date: dayMonthFormatter.string(from: departure),
-                        fromTime: timeFormatter.string(from: departure),
-                        toTime: timeFormatter.string(from: arrival),
-                        duration: hoursCeiled(from: duration)
+                        title: title,
+                        code: code,
+                        logoUrl: logoUrl,
+                        departureDay: dayMonthFormatter.string(from: departureDate),
+                        departureTime: timeFormatter.string(from: departureDate),
+                        arrivalTime: timeFormatter.string(from: arrivalDate),
+                        routeDuration: duration
                     )
                 }
             } catch {

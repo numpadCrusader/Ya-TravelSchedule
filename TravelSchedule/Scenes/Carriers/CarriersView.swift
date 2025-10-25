@@ -72,18 +72,20 @@ struct CarriersView: View {
             CarrierInfoView(carrier: carrier)
         }
         .overlay(alignment: .bottom) {
-            Button {
-                viewModel.openFilters()
-            } label: {
-                Text("Уточнить время")
-                    .foregroundColor(.ypWhiteUniversal)
-                    .font(.system(size: 17, weight: .bold))
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 60)
-                    .background(.ypBlueUniversal)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                    .padding(.horizontal, 16)
-                    .padding(.bottom, 24)
+            if viewModel.errorType == nil {
+                Button {
+                    viewModel.openFilters()
+                } label: {
+                    Text("Уточнить время")
+                        .foregroundColor(.ypWhiteUniversal)
+                        .font(.system(size: 17, weight: .bold))
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 60)
+                        .background(.ypBlueUniversal)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 24)
+                }
             }
         }
         .task {
