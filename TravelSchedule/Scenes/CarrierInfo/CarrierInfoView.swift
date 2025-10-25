@@ -72,6 +72,12 @@ struct CarrierInfoView: View {
                 }
             }
         }
+        .overlay {
+            if let type = viewModel.errorType {
+                ErrorView(errorType: type)
+                    .transition(.opacity)
+            }
+        }
         .task {
             viewModel.loadCarrierInfo(by: carrierCode)
         }
